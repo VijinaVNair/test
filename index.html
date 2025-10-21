@@ -35,6 +35,20 @@
       font-size: 1.5rem;
       padding: 0 10px;
     }
+    
+    h3 {
+        font-size: 1.1rem;
+        color: #0056b3;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    
+    h4 {
+        font-size: 1.05rem;
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
 
     /* Quick Navigation Styles */
     .nav-container {
@@ -113,7 +127,7 @@
     }
 
     .description.show {
-      max-height: 5000px;
+      max-height: 20000px; /* Increased max-height for large content */
       padding: 15px;
     }
 
@@ -124,6 +138,27 @@
     .description ul {
       margin-left: 20px;
       margin-bottom: 10px;
+    }
+    
+    .description li {
+        margin-bottom: 5px;
+    }
+    
+    pre {
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        margin: 10px 0;
+    }
+    
+    code {
+        font-family: "Courier New", Courier, monospace;
+        background-color: #eee;
+        padding: 2px 4px;
+        border-radius: 3px;
     }
 
     .controls {
@@ -231,15 +266,14 @@
   <div class="container">
     <h2>Interview Preparation – Viji</h2>
 
-    <!-- Quick Navigation Buttons -->
     <div class="nav-container">
       <button class="nav-btn active" data-category="all">All</button>
       <button class="nav-btn" data-category="hr">HR</button>
-      <button class="nav-btn" data-category="python">Python</button>
-      <button class="nav-btn" data-category="java">Java</button>
-      <button class="nav-btn" data-category="project">Project</button>
       <button class="nav-btn" data-category="placement">Placement</button>
+      <button class="nav-btn" data-category="project">Project</button>
       <button class="nav-btn" data-category="c">C</button>
+      <button class="nav-btn" data-category="java">Java</button>
+      <button class="nav-btn" data-category="python">Python</button>
       <button class="nav-btn" data-category="dbms">DBMS</button>
       <button class="nav-btn" data-category="oops">OOPS</button>
     </div>
@@ -249,237 +283,1444 @@
       <button class="btn" id="collapse-all">Collapse All</button>
     </div>
 
-    <!-- HR Questions -->
     <div class="topic" data-categories="hr">1️⃣ Self Introduction<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>First of all, thank you for giving me this opportunity to introduce myself. I'm Vijina V. Nair from Kerala, and I'm currently pursuing my final year in Computer Engineering at LBS College of Engineering, Kasaragod.</p>
+      <p>First of all, thank you for giving me this opportunity to introduce myself. I’m Vijina V. Nair from Kerala, and I’m currently pursuing my final year in Computer Engineering at LBS College of Engineering, Kasaragod.</p>
       <p>I would describe myself as an energetic and people-oriented individual who thrives on collaboration. I enjoy sharing ideas, learning through real-world experiences, and working in teams to achieve common goals. I adapt quickly to new situations and maintain a positive, solution-focused approach even when faced with challenges. I enjoy taking initiative but also value listening and learning from others. What motivates me most are small but meaningful accomplishments—solving a problem, helping someone overcome a difficulty, or making a positive impact within my team.</p>
-      <p>Apart from academics, I'm passionate about teaching high school students at a tuition center, where I enjoy simplifying concepts and inspiring young learners. I also work as an anchor for public events like weddings and other functions, which has strengthened my communication and stage-handling skills.</p>
-      <p>Academically, I have built a solid foundation in programming and AI technologies. I work with Python, C, Java, HTML, CSS, JavaScript, and MySQL. Recently, I completed an AI and Python internship at PACELAB, Kochi, where I strengthened my AI fundamentals and applied them to practical tasks. Some of my key projects include a Malayalam Voice Assistant for College Administration, which helps students and staff access academic information in their regional language, and a Pet Adoption Portal, which connects shelters with people interested in adopting pets.</p>
+      <p>Apart from academics, I’m passionate about teaching high school students at a tuition center, where I enjoy simplifying concepts and inspiring young learners. I also work as an anchor for public events like weddings and other functions, which has strengthened my communication and stage-handling skills.</p>
+      <p>Academically, I have built a solid foundation in programming and AI technologies. I work with Python, C, Java, HTML, CSS, JavaScript, and MySQL. Recently, I completed an AI and Python internship at PACELAB, Kochi, where I strengthened my AI fundamentals and applied them to practical tasks.</p>
+      <p>Some of my key projects include a Malayalam Voice Assistant for College Administration, which helps students and staff access academic information in their regional language, and a Pet Adoption Portal, which connects shelters with people interested in adopting pets.</p>
       <p>Looking ahead, I aim to become a professional who works with cutting edge technologies such as AI and automation, while ensuring my work is always connected to real-world needs. My goal is to keep learning, stay adaptable, and contribute meaningfully in every role I take on.</p>
     </div>
 
-    <div class="topic" data-categories="hr">3️⃣ Hobbies<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">2️⃣ Hobby<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>Apart from my studies, I enjoy engaging in creative and productive activities. I love exploring new technologies, building small projects, and improving my problem-solving skills. I also enjoy reading, learning new languages, and participating in events or competitions where I can challenge myself. I've read a few self-development books that really inspired me — like The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. In my free time, I like to listen to music, explore new ideas, and sometimes get involved in activities like coordination and volunteering, which help me improve teamwork and leadership.</p>
+      <p>Apart from my studies, I enjoy engaging in creative and productive activities. I love exploring new technologies, building small projects, and improving my problem-solving skills. I also enjoy reading, learning new languages, and participating in events or competitions where I can challenge myself. I’ve read a few self-development books that really inspired me — like The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. In my free time, I like to listen to music, explore new ideas, and sometimes get involved in activities like coordination and volunteering, which help me improve teamwork and leadership.</p>
     </div>
 
-    <div class="topic" data-categories="hr">4️⃣ Strengths<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">3️⃣ Strength<span class="topic-icon">▶</span></div>
     <div class="description">
       <p>My key strengths are teamwork, problem-solving, communication, and adaptability. For example, as the NRPF Regional Student Coordinator, I worked closely with multiple teams to organize events, which strengthened my teamwork and communication skills. During the events, unexpected challenges would arise, and I had to quickly find solutions, which enhanced my problem-solving ability. I also learned to adapt to changing situations and priorities, ensuring tasks were completed efficiently without compromising quality. Additionally, I am a quick learner, which helped me take on new responsibilities confidently.</p>
     </div>
 
-    <div class="topic" data-categories="hr">5️⃣ Weakness<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">4️⃣ Weakness<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>My biggest weakness is that I sometimes find it hard to say no to people. In the past, this made me take on too many tasks and feel a bit overwhelmed. But I've learned from that experience — now, before I agree to something new, I take a moment to look at my current workload and make sure I have the time and energy to do it well.</p>
+      <p>My biggest weakness is that I sometimes find it hard to say no to people. In the past, this made me take on too many tasks and feel a bit overwhelmed. But I’ve learned from that experience — now, before I agree to something new, I take a moment to look at my current workload and make sure I have the time and energy to do it well.</p>
     </div>
 
-    <div class="topic" data-categories="hr">6️⃣ Why Should We Hire You?<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">5️⃣ Why Hire Me?<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>You should select me because I'm a dedicated and responsible person who always gives my best. I have a strong foundation in programming, especially in Python, and I'm always eager to learn and grow. I work well in a team, communicate clearly, and can handle pressure without losing focus. I've also successfully led projects, which taught me how to take initiative and deliver results. I may be at the beginning of my career, but I'm passionate, hardworking, and ready to make a meaningful contribution from day one.</p>
+      <p>You should select me because I’m a dedicated and responsible person who always gives my best. I have a strong foundation in programming, especially in Python, and I’m always eager to learn and grow. I work well in a team, communicate clearly, and can handle pressure without losing focus. I’ve also successfully led projects, which taught me how to take initiative and deliver results. I may be at the beginning of my career, but im passionate, hardworking, and ready to make a meaningful contribution from day one.</p>
     </div>
 
-    <div class="topic" data-categories="hr">7️⃣ Higher Education<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">6️⃣ Higher Education<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I see learning as a lifelong process, even after I complete my graduation. I'm always eager to keep improving and gaining new skills to become a better software engineer. If the role requires further training or education, I'm more than ready to take it on and give my best.</p>
+      <p>I see learning as a lifelong process, even after I complete my graduation. I’m always eager to keep improving and gaining new skills to become a better software engineer. If the role requires further training or education, I’m more than ready to take it on and give my best.</p>
     </div>
 
-    <div class="topic" data-categories="hr">8️⃣ Salary Expectation<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">7️⃣ Salary<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I'm more focused on getting a good learning environment where I can grow and improve my technical skills. I believe that once I perform well and keep learning, salary growth will naturally follow. I also trust that the company offers a fair package for freshers based on industry standards, so I'm comfortable with the standard compensation for this role.</p>
+      <p>I’m more focused on getting a good learning environment where I can grow and improve my technical skills. I believe that once I perform well and keep learning, salary growth will naturally follow. I also trust that the company offers a fair package for freshers based on industry standards, so I’m comfortable with the standard compensation for this role.</p>
     </div>
 
-    <div class="topic" data-categories="hr">9️⃣ Willingness to Relocate<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">8️⃣ Relocate<span class="topic-icon">▶</span></div>
     <div class="description">
       <p>I would like to relocate for the sake of my career. It's a good way for me to meet new people and expand my network. I believe that it will improve my knowledge and also, I believe that relocation teaches how to change or work with new colleagues.</p>
     </div>
 
-    <div class="topic" data-categories="hr">🔟 Learning New Things<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">9️⃣ Learning New Things<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I'm very comfortable learning new things — in fact, I really enjoy it. I believe continuous learning helps me grow both personally and professionally. Whenever I come across something new, I like to explore it on my own first, watch tutorials, and practice until I understand it fully. That's exactly how I learned Python and other technical concepts. I see new things as opportunities to improve, not as challenges.</p>
+      <p>I’m very comfortable learning new things — in fact, I really enjoy it. I believe continuous learning helps me grow both personally and professionally. Whenever I come across something new, I like to explore it on my own first, watch tutorials, and practice until I understand it fully. That’s exactly how I learned Python and other technical concepts. I see new things as opportunities to improve, not as challenges.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣1️⃣ Preparation for Interview<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">🔟 Preparation for this interview<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I prepared for this interview by carefully reviewing my resume and revising key topics related to Python, AI, and my projects. I also practiced common interview questions and focused on improving how I explain my answers clearly and confidently. For me, good preparation isn't just about studying — it's also about understanding my strengths and being able to express them effectively.</p>
+      <p>I prepared for this interview by carefully reviewing my resume and revising key topics related to Python, AI, and my projects. I also practiced common interview questions and focused on improving how I explain my answers clearly and confidently. For me, good preparation isn’t just about studying — it’s also about understanding my strengths and being able to express them effectively.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣2️⃣ Challenges as a Team<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣1️⃣ Challenges as team<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>During my final year project, our team faced significant challenges related to communication and coordination. As the project leader, I noticed that our team members had different schedules and varying expectations, which led to misunderstandings and delays. To address this, I implemented weekly team meetings where we could all come together to discuss progress, clarify doubts, and realign our tasks. I also encouraged open and transparent communication, ensuring that everyone's ideas and concerns were heard and respected. As a result, our team's collaboration improved significantly. We became more organized, met our deadlines, and ultimately delivered a successful project. This experience taught me that effective communication and proactive planning are key to overcoming team challenges and achieving our goals.</p>
+      <p>During my final year project, our team faced significant challenges related to communication and coordination. As the project leader, I noticed that our team members had different schedules and varying expectations, which led to misunderstandings and delays. To address this, I implemented weekly team meetings where we could all come together to discuss progress, clarify doubts, and realign our tasks. I also encouraged open and transparent communication, ensuring that everyone’s ideas and concerns were heard and respected. As a result, our team’s collaboration improved significantly. We became more organized, met our deadlines, and ultimately delivered a successful project. This experience taught me that effective communication and proactive planning are key to overcoming team challenges and achieving our goals.</p>
     </div>
 
-    <div class="topic" data-categories="hr placement">1️⃣3️⃣ Why LTI Mindtree?<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr placement">1️⃣2️⃣ Why LTI Mindtree?<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I want to join LTI Mindtree because it's a company that truly values innovation and continuous learning. It works with cutting-edge technologies like AI, cloud, and automation, which are areas I'm genuinely passionate about. I also appreciate that LTI provides young engineers with opportunities to learn, grow, and take on responsibilities early in their careers.</p>
+      <p>I want to join LTI Mindtree because it’s a company that truly values innovation and continuous learning. It works with cutting-edge technologies like AI, cloud, and automation, which are areas I’m genuinely passionate about. I also appreciate that LTI provides young engineers with opportunities to learn, grow, and take on responsibilities early in their careers.</p>
     </div>
 
-    <div class="topic" data-categories="hr placement">1️⃣4️⃣ About LTI Mindtree<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr placement">1️⃣3️⃣ About LTI Mindtree<span class="topic-icon">▶</span></div>
     <div class="description">
       <p>LTI is a global technology consulting and digital solutions company, formed after the merger of Larsen & Toubro Infotech and Mindtree. It works in areas like AI, cloud, data analytics, automation, and cybersecurity. Currently, the company is working on the PAN 2.0 project, which involves tasks such as PAN card allotment, Aadhaar integration, and PAN linking, with a project duration of around 18 months.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣5️⃣ Questions to Ask Interviewer<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣4️⃣ Any questions?<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>Could you please tell me if there will be any training provided for this role? I'd love to know how you would describe the qualities of an ideal employee at LTI Mindtree.</p>
+      <p>Could you please tell me if there will be any training provided for this role?<br>I’d love to know how you would describe the qualities of an ideal employee at LTI Mindtree.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣6️⃣ 5 Years from Now<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣5️⃣ 5 years from now<span class="topic-icon">▶</span></div>
     <div class="description">
       <p>In five years, I see myself growing with LTIMindtree as a skilled professional. I want to work on real projects in AI, cloud, and automation. I hope to take more responsibility, contribute to my team, and keep learning. My goal is to make a meaningful impact and grow along with the company.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣7️⃣ Why Computer Science<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣6️⃣ Other than tech<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I chose Computer Science because I've always been curious about how technology shapes the world around us. I enjoy problem-solving and creating solutions that make life easier, and CS gives me the right platform to do that. It combines logic, creativity, and innovation, which excites me. I also see this field as constantly evolving, so it keeps me motivated to keep learning and growing.</p>
+      <p>Besides academics, I have several achievements that helped me grow personally and professionally. I work as an anchor for college events, which has really improved my confidence and communication skills. Being on stage and addressing a large audience taught me how to think quickly, stay calm under pressure, and engage people effectively. I also led my final year project team, where I coordinated tasks, made sure everyone’s ideas were heard, and completed the project successfully on time. This experience strengthened my leadership and teamwork skills. In addition, I taught English to younger students, which helped me become more patient and improve my ability to explain concepts clearly. I’ve also participated in coding competitions, where I learned problem-solving under time pressure. All these experiences together taught me the importance of communication, teamwork, leadership, and staying focused, which I believe are as important as technical skills.</p>
     </div>
 
-    <div class="topic" data-categories="hr">1️⃣8️⃣ Books Read<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣7️⃣ Soft Skills<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p>I've read The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. I also enjoy The Monk Who Sold His Ferrari by Robin Sharma. Apart from books, I read tech blogs and AI articles to stay updated.</p>
-    </div>
-
-    <div class="topic" data-categories="hr">1️⃣9️⃣ Leadership<span class="topic-icon">▶</span></div>
-    <div class="description">
-      <p>Yes, I do think I have leadership qualities. I was the project leader for my final-year project — the Malayalam Voice Assistant for College Administration. I guided my team, planned our tasks, and made sure we finished everything on time. Apart from that, I was also the NRPF Regional Student Coordinator under the NSS Cell of KTU, where I got to organize activities and coordinate with students from different colleges. Both experiences really helped me grow — I learned how to communicate better, solve problems calmly, and keep everyone motivated.</p>
-      <p>If I'm selected as the team leader, I'll focus on good communication first. I'll make sure everyone understands their role and feels comfortable sharing ideas. I believe a team works best when everyone feels included and respected. I'll plan the work clearly, set small goals, and keep regular check-ins to track progress. If any issue comes up, I'll handle it calmly, discuss it with the team, and find the best solution together. My aim would be to keep the team motivated and make sure we deliver quality work on time.</p>
-    </div>
-
-    <div class="topic" data-categories="hr">2️⃣0️⃣ Non-Technical Achievements<span class="topic-icon">▶</span></div>
-    <div class="description">
-      <p>Besides academics, I have several achievements that helped me grow personally and professionally. I work as an anchor for college events, which has really improved my confidence and communication skills. Being on stage and addressing a large audience taught me how to think quickly, stay calm under pressure, and engage people effectively. I also led my final year project team, where I coordinated tasks, made sure everyone's ideas were heard, and completed the project successfully on time. This experience strengthened my leadership and teamwork skills. In addition, I taught English to younger students, which helped me become more patient and improve my ability to explain concepts clearly. I've also participated in coding competitions, where I learned problem-solving under time pressure. All these experiences together taught me the importance of communication, teamwork, leadership, and staying focused, which I believe are as important as technical skills.</p>
-    </div>
-
-    <div class="topic" data-categories="hr">2️⃣1️⃣ Soft Skills in Action<span class="topic-icon">▶</span></div>
-    <div class="description">
-      <p>I've used my soft skills in several situations. For example:</p>
-      <ul>
-        <li><strong>Teamwork:</strong> During my final year project, I worked closely with my group members. I made sure everyone's ideas were heard and helped resolve conflicts, which kept the project on track.</li>
+      <p>“I’ve used my soft skills in several situations. For example:</p>
+      <ol>
+        <li><strong>Teamwork:</strong> During my final year project, I worked closely with my group members. I made sure everyone’s ideas were heard and helped resolve conflicts, which kept the project on track.</li>
         <li><strong>Communication:</strong> While teaching English to younger students, I had to explain concepts in a simple way so they could understand. Clear communication helped them learn faster.</li>
         <li><strong>Problem-solving:</strong> In a college coding competition, our program had a major bug. I stayed calm, analyzed the problem, and suggested a solution that helped the team submit on time.</li>
         <li><strong>Leadership:</strong> As a project leader, I planned tasks, motivated my team, and ensured deadlines were met without overloading anyone.</li>
-      </ul>
+      </ol>
     </div>
 
-    <!-- Technical Questions -->
-    <div class="topic" data-categories="python">Python Questions<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="hr">1️⃣8️⃣ Leadership<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>What is Python?</strong></p>
-      <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.</p>
-      
-      <p><strong>Key Features:</strong></p>
+      <p>“Yes, I do think I have leadership qualities. I was the project leader for my final-year project — the Malayalam Voice Assistant for College Administration. I guided my team, planned our tasks, and made sure we finished everything on time. Apart from that, I was also the NRPF Regional Student Coordinator under the NSS Cell of KTU, where I got to organize activities and coordinate with students from different colleges. Both experiences really helped me grow — I learned how to communicate better, solve problems calmly, and keep everyone motivated.”</p>
+      <p>“If I’m selected as the team leader, I’ll focus on good communication first. I’ll make sure everyone understands their role and feels comfortable sharing ideas. I believe a team works best when everyone feels included and respected. I’ll plan the work clearly, set small goals, and keep regular check-ins to track progress. If any issue comes up, I’ll handle it calmly, discuss it with the team, and find the best solution together. My aim would be to keep the team motivated and make sure we deliver quality work on time.”</p>
+    </div>
+
+    <div class="topic" data-categories="hr">1️⃣9️⃣ Why CS?<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>“I chose Computer Science because I’ve always been curious about how technology shapes the world around us. I enjoy problem-solving and creating solutions that make life easier, and CS gives me the right platform to do that. It combines logic, creativity, and innovation, which excites me. I also see this field as constantly evolving, so it keeps me motivated to keep learning and growing.”</p>
+    </div>
+
+    <div class="topic" data-categories="hr">2️⃣0️⃣ Longterm and short term goals<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>“In the short term, my goal is to join an organization like LTI where I can apply my technical knowledge, contribute to real-world projects, and continue learning from experienced professionals. I want to strengthen my skills in [mention your key skill/technology relevant to the role, e.g., software development, data analytics, or AI] while gaining exposure to client-oriented projects."</p>
+      <p>"In the long term, I aim to grow into a leadership role where I can lead projects, mentor junior team members, and contribute strategically to the organization’s success. I also want to stay updated with emerging technologies so that I can bring innovative solutions to the company.”</p>
+    </div>
+
+    <div class="topic" data-categories="hr">2️⃣1️⃣ Language<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>“I am comfortable with programming languages like C, C++, and Python, and I have hands-on experience in developing small projects and problem-solving using these languages. Besides that, I am familiar with SQL for database management and have worked on [mention any relevant technology, e.g., basic web development or AI concepts if applicable]. I am also quick at learning new technologies and adapting to the tools and frameworks used in a professional environment.”</p>
+    </div>
+
+    <div class="topic" data-categories="hr">2️⃣2️⃣ When strength helped<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>“One situation where my strengths really helped me was when I worked as the NRPF Regional Student Coordinator. In this role, I had to organize events, coordinate with multiple teams, and communicate effectively with students, faculty, and officers. This experience strengthened my teamwork, problem-solving, communication, and adaptability skills. It also taught me how to handle unexpected challenges and stay organized under pressure. Being a quick learner, I was able to plan tasks efficiently and ensure everything was completed on time without compromising quality, which I believe will be very useful in my career.”</p>
+    </div>
+
+    <div class="topic" data-categories="hr">2️⃣3️⃣ Failure<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>“During my first major event as the NRPF Regional Student Coordinator, I underestimated the time needed to coordinate with different teams and finalize logistics. As a result, we faced last-minute delays, and I felt that I hadn’t managed the situation well. However, I quickly learned from this experience by improving my planning and time management skills. I created a detailed timeline for future events, communicated more proactively with all stakeholders, and prepared contingency plans. Since then, I have successfully managed multiple events without delays, which taught me that failure is an opportunity to learn and improve.”</p>
+    </div>
+    
+    <div class="topic" data-categories="project python">Project: Malayalam Voice Assistant<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <h3>1. Brief Project Explanation</h3>
+      <p><strong>Short Answer:</strong> A voice assistant that understands Malayalam and English queries, matches them with JSON patterns, and provides answers.</p>
+      <p><strong>Long Answer:</strong> The Malayalam Voice Assistant is a voice-based system designed to help users quickly access information, especially college-related queries. It supports Malayalam, English, or mixed-language input. When a user speaks, the system converts speech to text using speech recognition, searches for relevant patterns in a JSON database, and returns the answer. Optionally, it can provide audio responses.</p>
+      <p><strong>Example:</strong> If a student asks about the principal's contact, the system instantly responds with the stored number.</p>
+
+      <h3>2. Technologies Used</h3>
+      <p><strong>Short Answer:</strong> Python, SpeechRecognition, Pygame, Threading, JSON.</p>
+      <p><strong>Long Answer:</strong></p>
       <ul>
-        <li>Easy to learn and use</li>
-        <li>Extensive standard library</li>
-        <li>Cross-platform compatibility</li>
-        <li>Dynamically typed</li>
-        <li>Supports automatic memory management</li>
+        <li><strong>Python:</strong> Core programming language for flexibility and library support.</li>
+        <li><strong>SpeechRecognition:</strong> Converts voice input to text.</li>
+        <li><strong>Pygame:</strong> Handles audio playback and optional Text-to-Speech.</li>
+        <li><strong>Threading:</strong> Ensures continuous listening without blocking the program.</li>
+        <li><strong>JSON:</strong> Stores structured FAQ data with multiple patterns and answers for accurate query matching.</li>
       </ul>
-    </div>
 
-    <div class="topic" data-categories="java">Java Questions<span class="topic-icon">▶</span></div>
-    <div class="description">
-      <p><strong>What is Java?</strong></p>
-      <p>Java is a high-level, object-oriented programming language that is designed to be platform-independent through the Java Virtual Machine (JVM).</p>
-      
-      <p><strong>Key Features:</strong></p>
+      <h3>3. Challenges Faced and Solutions</h3>
+      <p><strong>Short Answer:</strong></p>
       <ul>
-        <li>Platform independent (Write Once, Run Anywhere)</li>
-        <li>Object-oriented</li>
-        <li>Secure</li>
-        <li>Multithreaded</li>
-        <li>Automatic memory management (Garbage Collection)</li>
+        <li>Accuracy issues → improved pattern matching.</li>
+        <li>Ambiguous queries → added synonyms in JSON.</li>
+        <li>JSON errors → corrected format.</li>
       </ul>
+      <p><strong>Long Answer:</strong> The main challenges included:</p>
+      <ul>
+        <li><strong>Speech Recognition Accuracy:</strong> Mixed Malayalam-English accents caused misinterpretation. Solved by preprocessing audio for clarity.</li>
+        <li><strong>Ambiguous Queries:</strong> Queries could have multiple interpretations. Solved by adding synonyms and multiple patterns in JSON.</li>
+        <li><strong>JSON Errors:</strong> Issues like TypeError due to inconsistent formatting. Solved by correcting data structure for consistent parsing.</li>
+      </ul>
+
+      <h3>4. My Role in the Project</h3>
+      <p><strong>Short Answer:</strong> Implemented voice input, query matching, multilingual support, and testing.</p>
+      <p><strong>Long Answer:</strong> I designed and implemented the voice input module, developed the query-matching system using JSON patterns, integrated support for Malayalam and English queries, and tested the system to ensure accurate speech recognition and proper responses.</p>
+
+      <h3>5. Handling Malayalam-English Mixed Queries</h3>
+      <p><strong>Short Answer:</strong> Converts voice to text and matches keywords in both languages in JSON.</p>
+      <p><strong>Long Answer:</strong> The system converts voice input to text using the SpeechRecognition module, regardless of language. The query processing engine then searches for keywords and patterns in both Malayalam and English stored in JSON. This ensures that mixed-language queries are correctly understood and answered.</p>
+
+      <h3>6. System Architecture</h3>
+      <p><strong>Short Answer:</strong> Voice Input → Speech-to-Text → Query Processing → Response Module</p>
+      <p><strong>Long Answer:</strong> The system has four main modules:</p>
+      <ul>
+        <li><strong>Voice Input Module:</strong> Captures user audio.</li>
+        <li><strong>Speech-to-Text Module:</strong> Converts audio into text.</li>
+        <li><strong>Query Processing Module:</strong> Matches text with JSON patterns.</li>
+        <li><strong>Response Module:</strong> Retrieves and returns the answer, optionally as audio.</li>
+      </ul>
+      <p>Threading allows the system to continuously listen without interruption.</p>
+
+      <h3>7. Future Scope</h3>
+      <p><strong>Short Answer:</strong> TTS in Malayalam, AI intent detection, app integration, conversational queries.</p>
+      <p><strong>Long Answer:</strong> Future improvements could include:</p>
+      <ul>
+        <li>Full Text-to-Speech support in Malayalam.</li>
+        <li>AI-based intent detection for complex queries.</li>
+        <li>Integration with college or educational apps.</li>
+        <li>Support for conversational context to enable multi-turn interactions.</li>
+      </ul>
+
+      <h3>8. Example Use Case</h3>
+      <p><strong>Short Answer:</strong> User: “പ്രിൻസിപ്പാളിന്റെ ഫോൺ നമ്പർ എന്താണ്?”<br>System: “Principal’s contact is 9876543210.”</p>
+      <p><strong>Long Answer:</strong> For example, if a student wants the principal’s phone number, they might ask:</p>
+      <ul>
+        <li>“പ്രിൻസിപ്പാളിന്റെ ഫോൺ നമ്പർ എന്താണ്?”</li>
+        <li>“What is the principal’s contact?”</li>
+      </ul>
+      <p>The voice input module captures the query, converts it to text, searches the JSON database for relevant patterns, and responds with the stored contact number. This shows how the system provides instant, practical assistance.</p>
+
+      <h3>9. Why Is This Project Useful?</h3>
+      <p><strong>Short Answer:</strong> Provides quick, accessible information to students and staff using voice commands.</p>
+      <p><strong>Long Answer:</strong> This project enables students and staff to access important information quickly without manual searching or asking others. It improves accessibility for Malayalam speakers and can be expanded to handle a wide range of queries, saving time and increasing efficiency in college environments.</p>
     </div>
 
-    <div class="topic" data-categories="c">C Programming Questions<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="project dbms">Project: Pet Adoption Portal<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>main() function in C</strong></p>
-      <p>In C, the main() function is the starting point of any program. Every C program must have a main() function, otherwise the program won't run.</p>
-      <p>Example:</p>
+      <h3>1. What is your project?</h3>
+      <p><strong>Brief Answer:</strong> The project is a Pet Adoption System where users can view available pets, adopt them, and shelters can list pets online. It simplifies the adoption process and improves pet welfare.</p>
+      <p><strong>Long Answer:</strong> The Pet Adoption System is a comprehensive platform connecting pet shelters with potential adopters. Users can browse pets by type, age, or location, submit adoption requests, and communicate with shelters. Shelters can manage pet profiles, track adoption status, and update availability. This reduces manual paperwork and ensures pets are adopted faster. The system improves the overall efficiency of pet adoption while ensuring better care and management of animals.</p>
+
+      <h3>2. How does it work?</h3>
+      <p><strong>Brief Answer:</strong> Users create accounts, search for pets, view details, and submit adoption requests. Shelters receive notifications and approve or reject requests. The system maintains adoption history and updates pet status.</p>
+      <p><strong>Long Answer:</strong> The system follows a user-friendly workflow. Users register and log in, then search and filter pets by species, breed, age, or location. They can view detailed information about each pet, including health status, vaccinations, and photos. Once they find a pet, users submit an adoption request that is sent to the shelter. The shelter reviews the request, communicates with the user if needed, and approves or rejects it. The system then updates the pet status and maintains comprehensive records of all adoptions.</p>
+
+      <h3>3. What technologies are used?</h3>
+      <p><strong>Brief Answer:</strong> Frontend uses HTML, CSS, and JavaScript; backend is implemented in PHP; MySQL is used for data storage.</p>
+      <p><strong>Long Answer:</strong> The frontend is developed using HTML, CSS, JavaScript, and Bootstrap to ensure a responsive and interactive user interface. The backend is powered by PHP to handle server-side processing, including adoption workflows and user authentication. MySQL serves as the database to store information about users, pets, and adoption records efficiently. This combination of technologies ensures a secure, scalable, and maintainable system.</p>
+
+      <h3>4. What was your role in the project?</h3>
+      <p><strong>Brief Answer:</strong> I handled backend development, database design, and adoption workflow implementation.</p>
+      <p><strong>Long Answer:</strong> My role involved designing the database schema, writing PHP scripts for CRUD operations, managing user authentication, and implementing the adoption request workflow. I ensured data security and implemented validation and error handling. I also integrated frontend forms with the backend logic and collaborated with the team to design a user-friendly interface.</p>
+
+      <h3>5. What were the challenges faced?</h3>
+      <p><strong>Brief Answer:</strong> Managing multiple adoption requests for the same pet and ensuring consistent data across users and shelters was a major challenge.</p>
+      <p><strong>Long Answer:</strong> A significant challenge was handling concurrent adoption requests for the same pet while maintaining data integrity. Once a pet was adopted, it was crucial that all pending requests were updated correctly. Another challenge was designing an efficient database that securely stores pet details, adoption history, and user data, while allowing quick retrieval and scalability for future features.</p>
+
+      <h3>6. How did you solve these challenges?</h3>
+      <p><strong>Brief Answer:</strong> We added adoption status flags in the database and implemented backend checks to prevent conflicts.</p>
+      <p><strong>Long Answer:</strong> We implemented adoption status flags for each pet (Available, Pending, Adopted) to manage requests effectively. The backend checks the current status before approving any request, preventing conflicts. Transaction handling in MySQL ensures data integrity. If multiple users submit requests for the same pet, notifications are sent, and pending requests are automatically updated to reflect the new status.</p>
+
+      <h3>7. Can you explain the architecture of your project?</h3>
+      <p><strong>Brief Answer:</strong> The system follows a 3-tier architecture: Frontend, Backend, and Database.</p>
+      <p><strong>Long Answer:</strong> The Pet Adoption System uses a 3-tier web architecture:</p>
+      <ul>
+        <li><strong>Presentation Layer (Frontend):</strong>
+          <ul>
+            <li>HTML, CSS, JavaScript, Bootstrap</li>
+            <li>Displays pets, forms, adoption status, and notifications</li>
+          </ul>
+        </li>
+        <li><strong>Application Layer (Backend):</strong>
+          <ul>
+            <li>PHP handles business logic, user authentication, adoption workflows, and notifications</li>
+          </ul>
+        </li>
+        <li><strong>Data Layer (Database):</strong>
+          <ul>
+            <li>MySQL stores users, pets, adoption requests, and notifications</li>
+          </ul>
+        </li>
+      </ul>
+      <p><strong>Data Flow:</strong> Users browse pets → Backend validates requests → Database updates → Frontend shows confirmation → Shelter receives notifications</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: main() function<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, the <code>main()</code> function is the starting point of any program. Every C program must have a <code>main()</code> function, otherwise the program won’t run. It is the function where execution begins. It can return an integer value, usually 0, which indicates that the program executed successfully.</p>
+      <p><strong>Example:</strong></p>
       <pre>#include &lt;stdio.h&gt;
 int main() {
     printf("Hello World\n");
     return 0;
 }</pre>
-      
-      <p><strong>Pointers in C</strong></p>
+      <p>Here, the program starts from <code>main()</code>, prints "Hello World", and returns 0.</p>
+      <p>Sometimes <code>main()</code> can also accept arguments like <code>int argc</code> and <code>char *argv[]</code>. These are used to take command-line inputs.</p>
+      <p><strong>Key points to mention in an interview:</strong></p>
+      <ul>
+        <li><code>main()</code> is mandatory.</li>
+        <li>Execution always starts here.</li>
+        <li>Can return <code>int</code> or sometimes <code>void</code> (though <code>int</code> is standard).</li>
+        <li>Can accept command-line arguments.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="c">C: Pointers<span class="topic-icon">▶</span></div>
+    <div class="description">
       <p>A pointer in C is a variable that stores the memory address of another variable.</p>
-      <p>Example:</p>
+      <ul>
+        <li>Normal variable: stores value</li>
+        <li>Pointer variable: stores address (location of the value)</li>
+      </ul>
+      <p>For example, if I have <code>int a = 10;</code>, I can declare a pointer as <code>int *ptr = &a;</code>.</p>
+      <p>Here, <code>ptr</code> stores the address of <code>a</code>.</p>
+      <p>I can access the value of <code>a</code> using the pointer by dereferencing it: <code>*ptr</code> gives 10.</p>
+      <p>Pointers are powerful because they let us:</p>
+      <ul>
+        <li>Directly manipulate memory.</li>
+        <li>Pass large data structures to functions efficiently.</li>
+        <li>Handle arrays dynamically.</li>
+      </ul>
+      <p>We can also do pointer arithmetic. For example, if <code>ptr</code> points to an array element, <code>ptr + 1</code> points to the next element.</p>
+      <p><strong>Example:</strong></p>
+      <pre>int arr[3] = {10, 20, 30};
+int *ptr = arr;
+printf("%d", *(ptr + 1)); // Prints 20</pre>
+      <p>Pointers are essential in C because they provide flexibility and efficiency.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Dynamic Memory Allocation<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>Normally, memory is allocated at compile time (known as static allocation). But sometimes we don't know how much memory we'll need, for example, when reading user input or creating flexible data structures. Dynamic Memory Allocation (DMA) lets us allocate memory at runtime using functions from the <code>&lt;stdlib.h&gt;</code> library.</p>
+      <p>There are four main functions used for this: <code>malloc()</code>, <code>calloc()</code>, <code>realloc()</code>, and <code>free()</code>. I’ll explain each one with examples.</p>
+      
+      <h3>1. malloc() – Memory Allocation</h3>
+      <p><code>malloc()</code> stands for memory allocation. It allocates a single block of memory of a given size in bytes. The memory is not initialized, so it may contain garbage values.</p>
+      <p><strong>Syntax:</strong> <code>ptr = (castType*) malloc(sizeInBytes);</code></p>
+      <p><strong>Example:</strong></p>
+      <pre>int *ptr;
+ptr = (int*) malloc(5 * sizeof(int)); // Allocate memory for 5 integers</pre>
+      <p>Here, <code>ptr</code> points to the first element of the memory block. We should always check if <code>malloc()</code> succeeded:</p>
+      <pre>if(ptr == NULL) {
+    printf("Memory allocation failed");
+}</pre>
+
+      <h3>2. calloc() – Contiguous Allocation</h3>
+      <p><code>calloc()</code> stands for contiguous allocation. It allocates memory for multiple elements and initializes all bits to zero.</p>
+      <p><strong>Syntax:</strong> <code>ptr = (castType*) calloc(numElements, sizeOfElement);</code></p>
+      <p><strong>Example:</strong></p>
+      <pre>int *ptr;
+ptr = (int*) calloc(5, sizeof(int)); // 5 integers, all initialized to 0</pre>
+      <p>This is useful when we want clean, initialized memory instead of garbage values.</p>
+
+      <h3>3. realloc() – Reallocation</h3>
+      <p><code>realloc()</code> is used to resize previously allocated memory. This is useful if we initially allocated memory but later need more or less.</p>
+      <p><strong>Syntax:</strong> <code>ptr = (castType*) realloc(ptr, newSizeInBytes);</code></p>
+      <p><strong>Example:</strong></p>
+      <pre>ptr = (int*) realloc(ptr, 10 * sizeof(int)); // Resize memory to hold 10 integers</pre>
+      <p>If reallocation fails, <code>realloc()</code> returns NULL. So it’s good to assign it to a temporary pointer to avoid losing the original memory.</p>
+
+      <h3>4. free() – Deallocate Memory</h3>
+      <p><code>free()</code> is used to release memory that was previously allocated by <code>malloc()</code>, <code>calloc()</code>, or <code>realloc()</code>.</p>
+      <p><strong>Syntax:</strong></p>
+      <pre>free(ptr);
+ptr = NULL; // Avoid dangling pointer</pre>
+      <p>It is essential to free memory to prevent memory leaks, especially in large programs or long-running applications.</p>
+      
+      <h3>Example Using All Functions</h3>
+      <pre>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main() {
+    int *ptr;
+    // malloc
+    ptr = (int*) malloc(5 * sizeof(int));
+    for(int i=0; i&lt;5; i++) ptr[i] = i+1;
+    
+    // calloc
+    int *ptr2 = (int*) calloc(5, sizeof(int));
+    
+    // realloc
+    ptr = (int*) realloc(ptr, 10 * sizeof(int));
+    
+    // free
+    free(ptr);
+    free(ptr2);
+    ptr = NULL;
+    ptr2 = NULL;
+    
+    return 0;
+}</pre>
+    </div>
+
+    <div class="topic" data-categories="c">C: Static Function<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, a static function is a function whose scope is limited to the file in which it is declared. That means it cannot be accessed from other files, even if those files are part of the same project.</p>
+      <p>The main use of static functions is encapsulation. It helps hide internal logic and prevents other files from using or interfering with it. This also avoids name conflicts if multiple files have functions with the same name.</p>
+      <p>A static function retains its lifetime throughout the program execution, just like a global variable. But unlike global functions, it is not visible outside its file.</p>
+      <p><strong>Example:</strong></p>
+      <pre>#include &lt;stdio.h&gt;
+static void greet() {
+    printf("Hello from static function!\n");
+}
+int main() {
+    greet(); // Works fine
+    return 0;
+}</pre>
+      <p>If I try to call <code>greet()</code> from another file, it will not work because it is static.</p>
+      <p>So, to summarize, a static function is file-private, cannot be accessed externally, and is useful for hiding internal helper functions inside a file.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Local Variable<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>A local variable is a variable that is declared inside a function or a block. It only exists while the function is running. When the function ends, the variable is destroyed and its memory is freed.</p>
+      <p><strong>Example:</strong></p>
+      <pre>void func() {
+    int x = 10; // Local variable
+    printf("%d", x);
+}</pre>
+      <p>Here, <code>x</code> exists only inside <code>func()</code> and cannot be accessed outside it.</p>
+      <p>Local variables are useful because they keep data private to the function and prevent unwanted changes from other parts of the program.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Global Variable<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>A global variable is declared outside all functions, usually at the top of the program. It can be accessed by any function in the same file.</p>
+      <p>If we use the <code>extern</code> keyword, it can even be accessed from other files.</p>
+      <p><strong>Example:</strong></p>
+      <pre>#include &lt;stdio.h&gt;
+int count = 0; // Global variable
+void increment() {
+    count++;
+}
+int main() {
+    increment();
+    printf("%d", count); // Prints 1
+    return 0;
+}</pre>
+      <p>Global variables are useful for sharing data between functions, but they should be used carefully because any function can change them, which may cause bugs.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Control Statements<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, control statements help us control the flow of the program. There are four main ones: <code>break</code>, <code>continue</code>, <code>goto</code>, and <code>return</code>.</p>
+      
+      <h3>1. break</h3>
+      <p><code>break</code> is used to exit from a loop or <code>switch</code> immediately.</p>
+      <p><strong>Example:</strong></p>
+      <pre>for(int i = 1; i &lt;= 5; i++) {
+    if(i == 3) break;
+    printf("%d ", i);
+}
+// Output: 1 2</pre>
+      <p>Here, the loop stops when <code>i</code> becomes 3.</p>
+
+      <h3>2. continue</h3>
+      <p><code>continue</code> skips the current iteration and goes to the next iteration of the loop.</p>
+      <p><strong>Example:</strong></p>
+      <pre>for(int i = 1; i &lt;= 5; i++) {
+    if(i == 3) continue;
+    printf("%d ", i);
+}
+// Output: 1 2 4 5</pre>
+      <p>Here, 3 is skipped, but the loop continues.</p>
+
+      <h3>3. goto</h3>
+      <p><code>goto</code> jumps to a labeled part of the program.</p>
+      <p><strong>Example:</strong></p>
+      <pre>int i = 1;
+label:
+    printf("%d ", i);
+    i++;
+    if(i &lt;= 3) goto label;
+// Output: 1 2 3</pre>
+      <p><code>goto</code> can make code messy, so it’s usually avoided in structured programming.</p>
+
+      <h3>4. return</h3>
+      <p><code>return</code> exits from a function and optionally returns a value.</p>
+      <p><strong>Example:</strong></p>
+      <pre>int sum(int a, int b) {
+    return a + b;
+}
+int main() {
+    printf("%d", sum(2,3)); // Output: 5
+    return 0;
+}</pre>
+      <p>It is used to send values back to the caller and end function execution.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Tokens<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, tokens are the smallest meaningful units of a program. There are six types: keywords, identifiers, constants, strings, operators, and punctuation symbols.</p>
+      <ul>
+        <li><strong>Keywords</strong> are reserved words like <code>int</code> or <code>return</code>.</li>
+        <li><strong>Identifiers</strong> are names we give to variables or functions, like <code>sum</code> or <code>main</code>.</li>
+        <li><strong>Constants</strong> are fixed values like <code>10</code> or <code>'A'</code>.</li>
+        <li><strong>Strings</strong> are characters inside double quotes like <code>"Viji"</code>.</li>
+        <li><strong>Operators</strong> perform operations, for example <code>+</code>, <code>-</code>, or <code>==</code>.</li>
+        <li><strong>Punctuation symbols</strong> like <code>;</code>, <code>{}</code>, or <code>()</code> help organize the code.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="c">C: Predefined Functions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, a predefined function, also called a library function, is a function that is already provided by C in its standard library. We don’t need to write the code for it; we just call it to perform a specific task. These functions are declared in header files like <code>stdio.h</code>, <code>math.h</code>, <code>string.h</code>, etc. Using predefined functions makes programming faster and easier.</p>
+      <p>There are different categories:</p>
+      
+      <h3>1. Input/Output Functions</h3>
+      <ul>
+        <li>Declared in <code>stdio.h</code>.</li>
+        <li>Examples: <code>printf()</code>, <code>scanf()</code>.</li>
+        <li>Use: Print or read data.</li>
+      </ul>
+
+      <h3>2. Mathematical Functions</h3>
+      <ul>
+        <li>Declared in <code>math.h</code>.</li>
+        <li>Examples: <code>sqrt()</code>, <code>pow()</code>, <code>sin()</code>, <code>cos()</code>.</li>
+        <li>Use: Perform mathematical calculations.</li>
+      </ul>
+
+      <h3>3. String Handling Functions</h3>
+      <ul>
+        <li>Declared in <code>string.h</code>.</li>
+        <li>Examples: <code>strlen()</code>, <code>strcpy()</code>, <code>strcmp()</code>.</li>
+        <li>Use: Work with strings like copying, comparing, or finding length.</li>
+      </ul>
+
+      <h3>4. Character Handling Functions</h3>
+      <ul>
+        <li>Declared in <code>ctype.h</code>.</li>
+        <li>Examples: <code>isdigit()</code>, <code>isalpha()</code>, <code>toupper()</code>.</li>
+        <li>Use: Check or convert characters.</li>
+      </ul>
+
+      <h3>5. Time and Date Functions</h3>
+      <ul>
+        <li>Declared in <code>time.h</code>.</li>
+        <li>Examples: <code>time()</code>, <code>clock()</code>, <code>difftime()</code>.</li>
+        <li>Use: Work with current time or measure program execution.</li>
+      </ul>
+
+      <h3>6. Other Utility Functions</h3>
+      <ul>
+        <li>Declared in <code>stdlib.h</code>.</li>
+        <li>Examples: <code>malloc()</code>, <code>calloc()</code>, <code>exit()</code>.</li>
+        <li>Use: Dynamic memory allocation and process control.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="c">C: Header Files<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, header files contain predefined library functions. We can use these functions in our program by including the header file using <code>#include</code>. For example, <code>#include &lt;stdio.h&gt;</code> lets us use <code>printf()</code> and <code>scanf()</code>. Header files help reduce the amount of code we need to write and make the program simpler and less complex. So basically, whenever we want to use standard functions like input/output, math calculations, string operations, or memory management, we just include the relevant header file instead of writing the function ourselves.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Arrays<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, an array is a collection of elements of the same data type, stored in contiguous memory locations. We use arrays when we want to store multiple values of the same type together.</p>
+      <p><strong>Syntax:</strong> <code>data_type array_name[size];</code></p>
+      <p><strong>Example:</strong> <code>int mark[5];</code> // Array of 5 integers</p>
+      <p>We access array elements using index numbers starting from 0. For example, <code>mark[0]</code> is the first element and <code>mark[4]</code> is the fifth element.</p>
+      
+      <h3>Types of Arrays</h3>
+      <h4>1. One-Dimensional (1-D) Array</h4>
+      <p>A linear list of elements.</p>
+      <p><strong>Example:</strong> <code>int arr[5];</code> // 1-D array</p>
+      
+      <h4>2. Two-Dimensional (2-D) Array</h4>
+      <p>An array of arrays, like a matrix.</p>
+      <p><strong>Example:</strong> <code>int arr[3][4];</code> // 3 rows, 4 columns</p>
+      
+      <h4>3. Three-Dimensional (3-D) Array</h4>
+      <p>More than 2-D, used for multilayered data.</p>
+      <p><strong>Example:</strong> <code>int arr[2][3][4];</code> // 2 blocks, 3 rows, 4 columns</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: const Keyword<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, the <code>const</code> keyword is used to declare a constant variable, which cannot be changed after it is initialized.</p>
+      <p><strong>Example:</strong> <code>const int x = 10;</code></p>
+      <p>Here, <code>x</code> is a constant, so if we try to assign a new value to <code>x</code>, the compiler will give an error. Using <code>const</code> helps prevent accidental changes to variables that should remain constant, making the program safer and more reliable.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Memory Leak<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, a memory leak occurs when a program allocates memory dynamically but fails to free it after use. The memory becomes unreachable, but it still occupies space in RAM. Over time, this can cause the program or even the system to slow down or crash.</p>
+      <p><strong>Cause:</strong> Repeatedly allocating memory using functions like <code>malloc()</code> or <code>calloc()</code> without freeing the old memory.</p>
+      <p><strong>Solution:</strong> Always use <code>free()</code> to release dynamically allocated memory once it is no longer needed.</p>
+      <p><strong>Example:</strong></p>
+      <pre>int *ptr = (int*) malloc(sizeof(int));
+// use the memory
+free(ptr); // frees the memory to prevent memory leak</pre>
+    </div>
+
+    <div class="topic" data-categories="c">C: Call by Value vs Call by Reference<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, there are two ways to pass arguments to a function: call by value and call by reference.</p>
+      
+      <h3>1. Call by Value</h3>
+      <ul>
+        <li>The function receives a <strong>copy</strong> of the variable.</li>
+        <li>Any changes inside the function <strong>do not affect</strong> the original variable.</li>
+        <li>Safer because the original data cannot be changed, but it uses extra memory for the copy.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre>void fun(int x) {
+    x = x + 10;
+}
+int main() {
+    int a = 5;
+    fun(a);
+    printf("%d", a); // Prints 5
+}</pre>
+      <p>Here, <code>a</code> remains 5 outside the function because only a copy was modified.</p>
+      
+      <h3>2. Call by Reference</h3>
+      <ul>
+        <li>The function receives the <strong>address</strong> of the variable.</li>
+        <li>Any changes inside the function <strong>affect</strong> the original variable.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre>void fun(int *x) {
+    *x = *x + 10;
+}
+int main() {
+    int a = 5;
+    fun(&a);
+    printf("%d", a); // Prints 15
+}</pre>
+      <p>Here, <code>a</code> becomes 15 because the function modified the original variable through its address.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Compiler vs Interpreter<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C programming, there are two types of program translators: compiler and interpreter.</p>
+      
+      <h3>1. Compiler</h3>
+      <ul>
+        <li>The compiler compiles the <strong>entire code at once</strong>.</li>
+        <li>It displays all errors together after compilation.</li>
+        <li>Programs compiled by a compiler generally have <strong>faster</strong> execution.</li>
+        <li>Example: gcc for C.</li>
+      </ul>
+      
+      <h3>2. Interpreter</h3>
+      <ul>
+        <li>The interpreter executes the program <strong>line by line</strong>.</li>
+        <li>It shows output or errors for each line during execution.</li>
+        <li>Programs executed by an interpreter generally have <strong>slower</strong> execution.</li>
+        <li>Example: Python interpreter, JavaScript engine.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="c">C: Entry Loop vs Exit Loop<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, loops are used to execute a block of statements repeatedly. There are two types of loops based on when the condition is checked:</p>
+      
+      <h3>1. Entry Loop</h3>
+      <ul>
+        <li>In an entry loop, the condition is checked <strong>first</strong>.</li>
+        <li>The statements inside the loop execute only if the condition is true.</li>
+        <li>Example: <code>while</code> loop</li>
+      </ul>
+      <pre>int i = 1;
+while(i &lt;= 3) {
+    printf("%d ", i);
+    i++;
+}
+// Output: 1 2 3</pre>
+      <p>Here, the condition <code>i &lt;= 3</code> is checked before the loop executes.</p>
+      
+      <h3>2. Exit Loop</h3>
+      <ul>
+        <li>In an exit loop, the statements are executed <strong>first</strong>, and then the condition is checked.</li>
+        <li>It is also called an exit-controlled loop.</li>
+        <li>Example: <code>do-while</code> loop</li>
+      </ul>
+      <pre>int i = 1;
+do {
+    printf("%d ", i);
+    i++;
+} while(i &lt;= 3);
+// Output: 1 2 3</pre>
+      <p>Here, the statements execute at least once, even if the condition is false.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Typecasting<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, typecasting is the process of converting a variable from one data type to another. We use it when we want to temporarily change the type of a variable, usually for calculations or compatibility.</p>
+      
+      <h3>Types of Typecasting</h3>
+      <h4>1. Implicit Typecasting (Type Conversion)</h4>
+      <ul>
+        <li>Done automatically by the compiler.</li>
+        <li>Usually occurs when a smaller type is converted to a larger type.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
       <pre>int a = 10;
-int *ptr = &a;
-printf("%d", *ptr); // Prints 10</pre>
+float b = a; // int automatically converted to float</pre>
+      
+      <h4>2. Explicit Typecasting (Type Conversion)</h4>
+      <ul>
+        <li>Done manually by the programmer using parentheses.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre>float a = 9.8;
+int b = (int) a; // float explicitly converted to int</pre>
     </div>
 
-    <div class="topic" data-categories="dbms">DBMS Questions<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="c">C: sizeof Operator<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>What is DBMS?</strong></p>
-      <p>DBMS stands for Database Management System. It is software that stores, manages, and organizes data in a structured way.</p>
-      
-      <p><strong>Primary Key</strong></p>
-      <p>A Primary Key is a column or a set of columns in a table that uniquely identifies each record. It cannot have NULL values.</p>
-      
-      <p><strong>SQL Commands</strong></p>
+      <p>In C, the <code>sizeof</code> operator is used to determine the exact size of a data type or variable in bytes. It can be applied to built-in data types like <code>int</code>, <code>char</code>, <code>float</code>, or even arrays and structures.</p>
+      <p><strong>Example:</strong></p>
+      <pre>int a;
+printf("%zu", sizeof(a));  // Prints the size of int, usually 4 bytes
+printf("%zu", sizeof(char)); // Prints 1 byte</pre>
+      <p>Using <code>sizeof</code> helps understand memory usage and is useful in dynamic memory allocation.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: String Handling Functions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>C provides predefined string handling functions in the <code>string.h</code> library to perform operations on strings like copying, comparing, finding length, or concatenating. Some common functions are:</p>
       <ul>
-        <li>DDL (Data Definition Language): CREATE, ALTER, DROP</li>
-        <li>DML (Data Manipulation Language): INSERT, UPDATE, DELETE</li>
-        <li>DQL (Data Query Language): SELECT</li>
-        <li>DCL (Data Control Language): GRANT, REVOKE</li>
-        <li>TCL (Transaction Control Language): COMMIT, ROLLBACK</li>
+        <li><strong>strlen()</strong> – Returns the length of a string.
+          <pre>char str[] = "Viji";
+printf("%zu", strlen(str)); // Output: 4</pre>
+        </li>
+        <li><strong>strcpy()</strong> – Copies one string into another.
+          <pre>char src[] = "Hello";
+char dest[10];
+strcpy(dest, src); // dest now contains "Hello"</pre>
+        </li>
+        <li><strong>strcmp()</strong> – Compares two strings. Returns 0 if equal.
+          <pre>strcmp("abc", "abc"); // Returns 0</pre>
+        </li>
+        <li><strong>strcat()</strong> – Concatenates two strings.
+          <pre>char a[20] = "Hello ";
+char b[] = "World";
+strcat(a, b); // a now contains "Hello World"</pre>
+        </li>
+      </ul>
+      <p>These functions make string operations easier and faster.</p>
+    </div>
+
+    <div class="topic" data-categories="c">C: Structures<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In C, a structure is a user-defined data type that allows us to group variables of different data types together under a single name. Each member of a structure has its own memory, and we can access them individually using the dot operator (<code>.</code>).</p>
+      <p><strong>Example:</strong></p>
+      <pre>struct Student {
+    int id;
+    char name[30];
+    float marks;
+};
+int main() {
+    struct Student s1;
+    s1.id = 101;       // Accessing integer member
+    strcpy(s1.name, "Viji"); // Accessing string member
+    s1.marks = 95.5;   // Accessing float member
+    return 0;
+}</pre>
+      <p>Structures are useful when we want to store related information together, like a student's ID, name, and marks.</p>
+    </div>
+
+    <div class="topic" data-categories="c java">C vs Java<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>C and Java are different in many ways:</p>
+      <ul>
+        <li>C is a <strong>procedural</strong> language, while Java is <strong>object-oriented</strong>.</li>
+        <li>C is <strong>platform dependent</strong>, Java is <strong>platform independent</strong> because of the JVM.</li>
+        <li>In C, memory management is <strong>manual</strong> using <code>malloc()</code> and <code>free()</code>, whereas Java has <strong>automatic garbage collection</strong>.</li>
+        <li>C supports <strong>pointers</strong>, Java does not.</li>
+        <li>C does not have built-in exception handling, while Java has exceptions using <strong>try-catch</strong> blocks.</li>
+        <li>Functions in C are compiled to native code, while Java methods run on the JVM.</li>
       </ul>
     </div>
 
-    <div class="topic" data-categories="oops">OOPS Concepts<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="c">C: Macros<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>What is OOPS?</strong></p>
-      <p>OOPS, or Object-Oriented Programming, is a programming paradigm that organizes code around objects rather than just functions and logic.</p>
+      <p>In C, a macro is a preprocessor directive defined using <code>#define</code>. Before compilation, the macro name is replaced by its value wherever it appears in the code. Using macros can reduce code length and make programs easier to maintain.</p>
+      <p><strong>Example:</strong></p>
+      <pre>#define PI 3.14
+#define SQUARE(x) (x*x)
+int main() {
+    float area = PI * SQUARE(5); // area = 3.14 * 25
+    return 0;
+}</pre>
+      <p>Here, <code>PI</code> and <code>SQUARE(x)</code> are replaced by their values before compilation.</p>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Basics & Applications<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>DBMS</strong> stands for Database Management System. It is a software that stores, manages, and organizes data in a structured way. A DBMS allows users to create, read, update, and delete data efficiently, while also ensuring data security and integrity.</p>
       
-      <p><strong>Key Concepts:</strong></p>
+      <h3>Applications of DBMS</h3>
+      <p>DBMS is widely used in many areas, such as:</p>
       <ul>
-        <li><strong>Abstraction:</strong> Hiding internal details and showing only essential features</li>
-        <li><strong>Encapsulation:</strong> Wrapping data and methods into a single unit</li>
-        <li><strong>Inheritance:</strong> Creating new classes from existing ones</li>
-        <li><strong>Polymorphism:</strong> Same method name behaving differently in different contexts</li>
+        <li><strong>Banking Systems</strong> – For managing accounts, transactions, and customer data.</li>
+        <li><strong>Airline Reservation Systems</strong> – For booking tickets and managing flights.</li>
+        <li><strong>Universities</strong> – To maintain student records, courses, and exam results.</li>
+        <li><strong>Hospitals</strong> – For patient records, billing, and appointments.</li>
+        <li><strong>E-commerce</strong> – To manage product catalog, orders, and inventory.</li>
+        <li><strong>Library Management</strong> – To keep track of books, borrowing, and returns.</li>
       </ul>
     </div>
 
-    <!-- Project Questions -->
-    <div class="topic" data-categories="project">Malayalam Voice Assistant Project<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="dbms">DBMS: Primary Key<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>1. Brief Project Explanation</strong></p>
-      <p>A voice assistant that understands Malayalam and English queries, matches them with JSON patterns, and provides answers.</p>
-      
-      <p><strong>2. Technologies Used</strong></p>
-      <p>Python, SpeechRecognition, Pygame, Threading, JSON.</p>
-      
-      <p><strong>3. Challenges Faced and Solutions</strong></p>
-      <ul>
-        <li>Accuracy issues → improved pattern matching</li>
-        <li>Ambiguous queries → added synonyms in JSON</li>
-        <li>JSON errors → corrected format</li>
-      </ul>
-      
-      <p><strong>4. My Role in the Project</strong></p>
-      <p>Implemented voice input, query matching, multilingual support, and testing.</p>
+      <p>In DBMS, a <strong>Primary Key</strong> is a column or a set of columns in a table that uniquely identifies each record. A primary key cannot have NULL values, and no two rows can have the same primary key.</p>
+      <p><strong>Example:</strong></p>
+      <pre>CREATE TABLE Student (
+    RollNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT
+);</pre>
+      <p>Here, <code>RollNo</code> is the primary key, so each student has a unique roll number.</p>
     </div>
 
-    <div class="topic" data-categories="project">Pet Adoption Project<span class="topic-icon">▶</span></div>
+    <div class="topic" data-categories="dbms">DBMS: NULL vs UNIQUE Constraints<span class="topic-icon">▶</span></div>
     <div class="description">
-      <p><strong>1. What is your project?</strong></p>
-      <p>The project is a Pet Adoption System where users can view available pets, adopt them, and shelters can list pets online. It simplifies the adoption process and improves pet welfare.</p>
+      <p>In a database, constraints are rules applied on columns to ensure data integrity.</p>
       
-      <p><strong>2. How does it work?</strong></p>
-      <p>Users create accounts, search for pets, view details, and submit adoption requests. Shelters receive notifications and approve or reject requests.</p>
+      <h3>1. NULL Constraint</h3>
+      <ul>
+        <li>Determines whether a column can accept NULL values.</li>
+        <li>Use <code>NOT NULL</code> to make a column mandatory.</li>
+      </ul>
+      <p><strong>Example:</strong> <code>Name VARCHAR(50) NOT NULL</code><br>Here, the Name column cannot be left empty.</p>
       
-      <p><strong>3. Technologies Used</strong></p>
-      <p>Frontend uses HTML, CSS, and JavaScript; backend is implemented in PHP; MySQL is used for data storage.</p>
-      
-      <p><strong>4. What was your role in the project?</strong></p>
-      <p>I handled backend development, database design, and adoption workflow implementation.</p>
+      <h3>2. UNIQUE Constraint</h3>
+      <ul>
+        <li>Ensures that all values in a column are distinct.</li>
+        <li>Most DBMS allow one NULL value in a UNIQUE column.</li>
+      </ul>
+      <p><strong>Example:</strong> <code>Email VARCHAR(50) UNIQUE</code><br>Here, no two rows can have the same email address.</p>
     </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Degree of Relation<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In DBMS, the <strong>degree of a relation</strong> is the number of attributes or columns in a table. It tells us how many fields are used to describe each record in the table.</p>
+      <p><strong>Example:</strong></p>
+      <pre>CREATE TABLE Student (
+    RollNo INT,
+    Name VARCHAR(50),
+    Age INT,
+    Marks INT
+);</pre>
+      <p>Here, the Student table has 4 columns: RollNo, Name, Age, Marks. So, the degree of this relation is 4.</p>
+      <p><strong>Important points:</strong></p>
+      <ul>
+        <li>Degree depends on the number of columns, not the number of rows.</li>
+        <li>It is useful in database design and normalization.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Logical vs Physical Database<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In DBMS, there are two ways to view a database: logical and physical.</p>
+      
+      <h3>1. Logical Database</h3>
+      <ul>
+        <li>Shows <strong>what</strong> data is stored and how it is related conceptually.</li>
+        <li>Focuses on structure, relationships, and constraints, like tables, columns, and ER models.</li>
+        <li>It is a high-level, user-facing view.</li>
+      </ul>
+      <p><strong>Example:</strong> A Student table with columns RollNo, Name, and Marks. Here, we are only concerned with what data exists and how it relates, not how it is stored.</p>
+      
+      <h3>2. Physical Database</h3>
+      <ul>
+        <li>Shows <strong>how and where</strong> data is actually stored on disk or in memory.</li>
+        <li>Focuses on storage, indexing, file organization, and access paths, such as data files, indexes, and memory blocks.</li>
+        <li>It is a low-level, implementation view.</li>
+      </ul>
+      <p><strong>Example:</strong> How the Student table records are stored on disk, the layout of files, and indexing methods for faster access.</p>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Database Languages (DDL, DML, DQL, DCL, TCL)<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In DBMS, database languages are used to create, manage, and manipulate databases. The main types are: DDL, DML, DQL, DCL, and TCL.</p>
+      
+      <h3>1. DDL – Data Definition Language</h3>
+      <p>Used to define the structure of the database.</p>
+      <p><strong>Examples:</strong></p>
+      <pre>CREATE TABLE Student (...);
+ALTER TABLE Student ADD Address VARCHAR(50);
+DROP TABLE Student;
+TRUNCATE TABLE Student;</pre>
+
+      <h3>2. DML – Data Manipulation Language</h3>
+      <p>Used to modify data in the database.</p>
+      <p><strong>Examples:</strong></p>
+      <pre>INSERT INTO Student VALUES (1, 'Viji', 95);
+UPDATE Student SET Marks = 98 WHERE RollNo = 1;
+DELETE FROM Student WHERE RollNo = 1;</pre>
+
+      <h3>3. DQL – Data Query Language</h3>
+      <p>Used to fetch or retrieve data.</p>
+      <p><strong>Example:</strong></p>
+      <pre>SELECT * FROM Student;</pre>
+
+      <h3>4. DCL – Data Control Language</h3>
+      <p>Used to control access to data.</p>
+      <p><strong>Examples:</strong></p>
+      <pre>GRANT SELECT ON Student TO user1;
+REVOKE UPDATE ON Student FROM user2;</pre>
+
+      <h3>5. TCL – Transaction Control Language</h3>
+      <p>Used to manage transactions.</p>
+      <p><strong>Examples:</strong></p>
+      <pre>COMMIT;
+ROLLBACK;
+SAVEPOINT sp1;</pre>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: WHERE vs HAVING<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In SQL, both WHERE and HAVING are used to filter records, but they work at different stages:</p>
+      
+      <h3>1. WHERE Clause</h3>
+      <ul>
+        <li>Filters <strong>individual rows before</strong> grouping.</li>
+        <li><strong>Cannot</strong> use aggregate functions like SUM, AVG, COUNT.</li>
+        <li>Appears <strong>before</strong> GROUP BY in a query.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre>SELECT * FROM Sales
+WHERE Amount &gt; 1000;</pre>
+      <p>This filters all sales greater than 1000.</p>
+      
+      <h3>2. HAVING Clause</h3>
+      <ul>
+        <li>Filters <strong>groups of rows after</strong> grouping.</li>
+        <li><strong>Can</strong> use aggregate functions.</li>
+        <li>Appears <strong>after</strong> GROUP BY in a query.</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre>SELECT Seller, SUM(Amount)
+FROM Sales
+GROUP BY Seller
+HAVING SUM(Amount) &gt; 5000;</pre>
+      <p>This filters sellers whose total sales are above 5000.</p>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Transactions & ACID Properties<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In DBMS, a <strong>transaction</strong> is a sequence of operations performed as a single logical unit of work. The key idea is: either all operations succeed or none are applied, which maintains database consistency.</p>
+      
+      <h3>Example of a Transaction</h3>
+      <p>Consider a money transfer from Account A to Account B:</p>
+      <pre>BEGIN;
+UPDATE Account SET Balance = Balance - 1000 WHERE AccNo = 'A';
+UPDATE Account SET Balance = Balance + 1000 WHERE AccNo = 'B';
+COMMIT;</pre>
+      <p>If any step fails, <code>ROLLBACK</code> undoes all changes.</p>
+      <p>Transaction control commands include:</p>
+      <ul>
+        <li><strong>COMMIT</strong> – save changes</li>
+        <li><strong>ROLLBACK</strong> – undo changes</li>
+        <li><strong>SAVEPOINT</strong> – set a point to roll back to</li>
+      </ul>
+      
+      <h3>ACID Properties</h3>
+      <p>Transactions follow ACID properties to ensure reliability:</p>
+      <ul>
+        <li><strong>Atomicity</strong> – All or nothing. A transaction must complete fully or not at all.
+          <br><em>Example:</em> If debiting A succeeds but crediting B fails, the debit is undone.</li>
+        <li><strong>Consistency</strong> – Data must remain valid. Database rules and constraints are preserved.
+          <br><em>Example:</em> Total balance across accounts remains the same before and after transfer.</li>
+        <li><strong>Isolation</strong> – Transactions do not interfere with each other. Each runs as if it is the only one.
+          <br><em>Example:</em> Two users cannot book the same seat at the same time.</li>
+        <li><strong>Durability</strong> – Once committed, changes are permanent. Survive system failures.
+          <br><em>Example:</em> After a successful transfer, the records are preserved even if the system restarts.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: ER (Entity-Relationship) Model<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "An ER model is a way to show how data is structured in a database. It uses <strong>entities</strong>, <strong>attributes</strong>, and <strong>relationships</strong> to give a high-level conceptual view of the data."</p>
+      
+      <h3>1. Entity</h3>
+      <p><strong>What it is:</strong> A real-world object that can be identified uniquely.</p>
+      <p><strong>Example:</strong> A Student in a college, a Car, or a Book.</p>
+      <p><strong>Types of entities:</strong></p>
+      <ul>
+        <li><strong>Strong entity:</strong> Has its own primary key and does not depend on other entities.
+          <br><em>Example:</em> Student with StudentID.</li>
+        <li><strong>Weak entity:</strong> Cannot be identified alone; depends on a strong entity. Identified using a partial key + owner’s key.
+          <br><em>Example:</em> Dependent of an Employee (like their child). It depends on EmployeeID + DependentName.</li>
+      </ul>
+      
+      <h3>2. Attribute</h3>
+      <p><strong>What it is:</strong> A property that describes an entity.</p>
+      <p><strong>Types with examples:</strong></p>
+      <ul>
+        <li><strong>Key attribute:</strong> Uniquely identifies an entity. <em>Example:</em> StudentID for Student.</li>
+        <li><strong>Composite attribute:</strong> Can be divided into smaller parts. <em>Example:</em> Name → FirstName + LastName</li>
+        <li><strong>Multivalued attribute:</strong> Can have multiple values. <em>Example:</em> A Student may have multiple PhoneNumbers.</li>
+        <li><strong>Derived attribute:</strong> Computed from other attributes. <em>Example:</em> Age can be derived from DateOfBirth.</li>
+        <li><strong>Simple attribute:</strong> Cannot be divided, holds a single value. <em>Example:</em> Gender, BloodGroup</li>
+      </ul>
+      
+      <h3>3. Relationship</h3>
+      <p><strong>What it is:</strong> Shows association between entities.</p>
+      <p><strong>Example:</strong> Student enrolls in Course.</p>
+      <p><strong>Types of relationships:</strong></p>
+      <ul>
+        <li><strong>One-to-One (1:1):</strong> One entity maps to only one entity. <em>Example:</em> A Student has one Passport.</li>
+        <li><strong>One-to-Many (1:N):</strong> One entity maps to many entities. <em>Example:</em> A Teacher teaches many Students.</li>
+        <li><strong>Many-to-One (N:1):</strong> Many entities map to one entity. <em>Example:</em> Many Students belong to one Department.</li>
+        <li><strong>Many-to-Many (M:N):</strong> Many entities map to many entities. <em>Example:</em> Students enroll in many Courses, and Courses have many Students.</li>
+      </ul>
+      
+      <h3>4. Mapping ER to Tables (Relations)</h3>
+      <ul>
+        <li><strong>Strong entity:</strong> Directly maps to a table using its primary key.</li>
+        <li><strong>Weak entity:</strong> Table with combined key (owner key + partial key) + foreign key reference.</li>
+        <li><strong>One-to-Many:</strong> Add a foreign key on the many side.</li>
+        <li><strong>One-to-One:</strong> Add a foreign key on either side with UNIQUE constraint.</li>
+        <li><strong>Many-to-Many:</strong> Create a junction table with both foreign keys as composite primary key.</li>
+        <li><strong>Multivalued attribute:</strong> Map to separate table.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Relational Algebra<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Relational Algebra is a procedural query language used in databases. It defines <strong>operators</strong> that transform input tables, or relations, into output tables, and it forms the theoretical foundation of SQL."</p>
+      <ul>
+        <li><strong>Selection (σ)</strong> filters rows based on a condition. For example, to get students with marks greater than 80, we use selection.</li>
+        <li><strong>Projection (π)</strong> chooses specific columns and removes duplicates. For example, to get only the names of students, we project the Name column.</li>
+        <li><strong>Union</strong> combines tuples from two compatible tables and removes duplicates. For example, combining two classes’ student lists.</li>
+        <li><strong>Set Difference</strong> returns tuples in one table but not in another. For example, students enrolled in Math but not in Physics.</li>
+        <li><strong>Intersection</strong> returns tuples present in both tables. For example, students enrolled in both Math and Physics.</li>
+        <li><strong>Cartesian Product</strong> pairs each row of one table with every row of another, and it’s the basis for joins. For example, pairing all students with all courses.</li>
+        <li><strong>Rename (ρ)</strong> changes table or column names to avoid confusion.</li>
+        <li><strong>Joins</strong> combine related tuples from two tables:
+          <ul>
+            <li><strong>Theta join</strong> uses a condition, like StudentID matching in Student and Enrollment.</li>
+            <li><strong>Equijoin</strong> is a theta join with equality condition.</li>
+            <li><strong>Natural join</strong> automatically joins tables on columns with the same name.</li>
+          </ul>
+        </li>
+        <li><strong>Division</strong> is used to find tuples related to all tuples of another relation. For example, finding students who took all courses.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Normalization<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Normalization is the process of organizing database tables to reduce redundancy and improve data integrity. It means dividing large tables into smaller, related tables and linking them through keys."</p>
+      
+      <h3>1. First Normal Form (1NF)</h3>
+      <ul>
+        <li>Each column must have <strong>atomic</strong> (indivisible) values.</li>
+        <li>No repeating groups or arrays.</li>
+        <li><em>Example:</em> Instead of storing multiple phone numbers in one column, store each number in a separate row.</li>
+      </ul>
+      
+      <h3>2. Second Normal Form (2NF)</h3>
+      <ul>
+        <li>Must be in 1NF.</li>
+        <li>No <strong>partial dependency</strong>: all non-key columns must depend on the whole primary key.</li>
+        <li><em>Example:</em> In a table with StudentID + CourseID as a combined key, StudentName should depend only on StudentID, not the combination.</li>
+      </ul>
+      
+      <h3>3. Third Normal Form (3NF)</h3>
+      <ul>
+        <li>Must be in 2NF.</li>
+        <li>No <strong>transitive dependency</strong>: non-key attributes should not depend on other non-key attributes.</li>
+        <li><em>Example:</em> If StudentID → Department → DepartmentHead, separate Department and DepartmentHead into a different table.</li>
+      </ul>
+      
+      <h3>4. Boyce-Codd Normal Form (BCNF)</h3>
+      <ul>
+        <li>Stronger than 3NF.</li>
+        <li>Every determinant must be a candidate key, especially when multiple candidate keys exist.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Keys<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Keys are attributes or combinations of attributes that uniquely identify rows in a table or establish relationships between tables."</p>
+      <ul>
+        <li><strong>Primary Key:</strong> Uniquely identifies each record in a table and cannot be NULL.
+          <br><em>Example:</em> StudentID in a Student table.</li>
+        <li><strong>Foreign Key:</strong> Links one table to another by referencing a primary key.
+          <br><em>Example:</em> StudentID in the Marks table referencing Student table.</li>
+        <li><strong>Candidate Key:</strong> All possible attributes that can serve as a primary key.
+          <br><em>Example:</em> Both Email and StudentID could uniquely identify a student, so they are candidate keys.</li>
+        <li><strong>Composite Key:</strong> Made by combining two or more columns to uniquely identify a record.
+          <br><em>Example:</em> StudentID + CourseID in an Enrollment table.</li>
+        <li><strong>Alternate Key:</strong> A candidate key that was not chosen as the primary key.
+          <br><em>Example:</em> If StudentID is primary, Email can be an alternate key.</li>
+        <li><strong>Super Key:</strong> Any key that uniquely identifies a record, even if it has extra attributes.
+          <br><em>Example:</em> StudentID + Email can be a super key because it still uniquely identifies a student.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Aggregate Functions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Aggregate functions are used to perform calculations on a set of values and give a single result."</p>
+      <ul>
+        <li><strong>COUNT:</strong> Counts the number of rows.
+          <br><em>Example:</em> <code>SELECT COUNT(*) FROM students;</code> – gives the total number of students.</li>
+        <li><strong>SUM:</strong> Adds up numeric values.
+          <br><em>Example:</em> <code>SELECT SUM(salary) FROM employees;</code> – gives the total salary of all employees.</li>
+        <li><strong>AVG:</strong> Returns the average of values.
+          <br><em>Example:</em> <code>SELECT AVG(marks) FROM results;</code> – gives the average marks of students.</li>
+        <li><strong>MAX:</strong> Returns the highest value.
+          <br><em>Example:</em> <code>SELECT MAX(price) FROM products;</code> – gives the highest product price.</li>
+        <li><strong>MIN:</strong> Returns the lowest value.
+          <br><em>Example:</em> <code>SELECT MIN(age) FROM users;</code> – gives the minimum age among users.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: Union and Intersection<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Union and Intersection are operations used to combine results from multiple queries."</p>
+      
+      <h3>Union</h3>
+      <p>Combines results from two or more SELECT statements and <strong>removes duplicates</strong>. It returns all rows present in either result set.</p>
+      <p><strong>Example:</strong></p>
+      <pre>SELECT name FROM students_2024
+UNION
+SELECT name FROM students_2025;</pre>
+      <p>This gives the names of all students from both batches, without duplicates.</p>
+      
+      <h3>Intersection</h3>
+      <p>Returns only the <strong>common records</strong> between two queries. Some SQL systems use <code>INTERSECT</code>, or it can be simulated with <code>INNER JOIN</code>.</p>
+      <p><strong>Example:</strong></p>
+      <pre>SELECT name FROM students_2024
+INTERSECT
+SELECT name FROM students_2025;</pre>
+      <p>This gives the names of students present in both batches.</p>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: DBMS vs RDBMS<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Both DBMS and RDBMS are used to store and manage data, but there are key differences."</p>
+      
+      <h3>DBMS (Database Management System)</h3>
+      <ul>
+        <li>Helps store, manage, and retrieve data.</li>
+        <li>Allows basic operations like insert, update, delete, fetch.</li>
+        <li>May not enforce relationships or constraints.</li>
+        <li><em>Example:</em> Microsoft Access, XML databases, file systems.</li>
+      </ul>
+      
+      <h3>RDBMS (Relational DBMS)</h3>
+      <ul>
+        <li>Stores data in <strong>tables</strong> with rows and columns.</li>
+        <li>Maintains <strong>relationships</strong> using keys.</li>
+        <li>Supports <strong>SQL</strong> and enforces constraints for data integrity.</li>
+        <li><em>Example:</em> MySQL, Oracle, PostgreSQL, SQL Server.</li>
+      </ul>
+      
+      <h3>Key Differences:</h3>
+      <ul>
+        <li>DBMS may have file-based storage, higher redundancy, and weaker integrity.</li>
+        <li>RDBMS reduces redundancy via normalization and enforces integrity with relationships and constraints.</li>
+      </ul>
+      
+      <h3>Redundancy and Data Integrity</h3>
+      <ul>
+        <li><strong>Redundancy:</strong> Repetition of the same data in multiple places. Normalization helps remove this.</li>
+        <li><strong>Data Integrity:</strong> Ensures accuracy and consistency of data in the database.</li>
+      </ul>
+      
+      <h3>Transitive Dependency</h3>
+      <p>"A transitive dependency occurs when a non-key column depends on another non-key column instead of depending directly on the primary key."</p>
+      <p><em>Example:</em> If StudentID → Department and Department → DepartmentHead, then StudentID → DepartmentHead is a transitive dependency.</p>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS: JOINs<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>"Joins are used to combine rows from two or more tables based on a related column between them. They help us fetch meaningful data from multiple tables."</p>
+      
+      <h3>Types of Joins</h3>
+      <ul>
+        <li><strong>Inner Join:</strong>
+          <br>Returns only the rows that have matching values in both tables.
+          <br><em>Example:</em> Get students and their enrolled courses, but only if they have enrolled in at least one course.</li>
+        <li><strong>Left (Outer) Join:</strong>
+          <br>Returns all rows from the left table, and matching rows from the right table. If there’s no match, NULL is returned for the right table.
+          <br><em>Example:</em> List all students and their courses, including students who haven’t enrolled in any course.</li>
+        <li><strong>Right (Outer) Join:</strong>
+          <br>Returns all rows from the right table, and matching rows from the left table. NULL if no match.
+          <br><em>Example:</em> List all courses and the students enrolled, including courses with no students.</li>
+        <li><strong>Full (Outer) Join:</strong>
+          <br>Returns all rows from both tables, with NULLs where there’s no match.
+          <br><em>Example:</em> List all students and all courses, showing NULL where no enrollment exists.</li>
+        <li><strong>Cross Join (Cartesian Product):</strong>
+          <br>Combines every row of one table with every row of the other table.
+          <br><em>Example:</em> Pair every student with every course (used rarely).</li>
+        <li><strong>Self Join:</strong>
+          <br>A table is joined with itself.
+          <br><em>Example:</em> Find employees and their managers from the same Employee table.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops">OOPS: Core Concept<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>OOPS, or Object-Oriented Programming, is a programming paradigm that organizes code around <strong>objects</strong> rather than just functions and logic. Each object represents real-world entities and contains data and behavior.</p>
+      <p>OOPS helps make code:</p>
+      <ul>
+        <li><strong>Modular:</strong> so different parts are separated;</li>
+        <li><strong>Reusable:</strong> so we can use objects or classes in multiple places;</li>
+        <li><strong>Easy to understand:</strong> because it models real-world entities;</li>
+        <li><strong>Easy to maintain:</strong> since changes in one object usually don’t affect others.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Abstraction<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "Abstraction is the concept of <strong>hiding the internal details</strong> of an object and exposing only the necessary features to the outside world. It allows programmers to focus on <strong>what an object does</strong>, rather than <strong>how it does it</strong>."</p>
+      
+      <h3>Key Points:</h3>
+      <ul>
+        <li>Abstraction simplifies complex systems by hiding unnecessary details.</li>
+        <li>It helps reduce code complexity and makes programs easier to understand and maintain.</li>
+        <li>Abstraction is achieved in OOPS using:
+          <ul>
+            <li><strong>Abstract Classes</strong> – Classes that cannot be instantiated directly and may contain abstract methods.</li>
+            <li><strong>Interfaces</strong> (in languages like Java) – Define methods without implementation, which must be implemented by child classes.</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3>Real-world Example:</h3>
+      <ul>
+        <li><strong>Driving a car:</strong> You press the accelerator to increase speed. You don’t need to know how the engine works internally.</li>
+        <li><strong>The remote control of a TV:</strong> You press buttons to change channels or volume. You don’t need to know the circuits inside.</li>
+      </ul>
+      
+      <h3>Code Example in Python:</h3>
+      <pre>from abc import ABC, abstractmethod
+
+# Abstract class
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+        
+    @abstractmethod
+    def stop(self):
+        pass
+
+# Child class implements the abstract methods
+class Car(Vehicle):
+    def start(self):
+        print("Car is starting...")
+        
+    def stop(self):
+        print("Car has stopped.")
+
+# Using the class
+my_car = Car()
+my_car.start()  # Output: Car is starting...
+my_car.stop()   # Output: Car has stopped.</pre>
+      
+      <h3>Benefits of Abstraction:</h3>
+      <ul>
+        <li>Reduces complexity – Users don’t see unnecessary details.</li>
+        <li>Improves maintainability – Changes in internal implementation don’t affect users.</li>
+        <li>Enhances security – Sensitive internal details are hidden.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Encapsulation<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "Encapsulation is the concept of <strong>wrapping data (variables) and methods</strong> that operate on the data into a single unit, usually a class. It also restricts direct access to the data by using private or protected members, so the internal state of an object is protected."</p>
+      
+      <h3>Key Points:</h3>
+      <ul>
+        <li>Encapsulation hides the internal details of an object.</li>
+        <li>Access to data is controlled using <strong>getter and setter methods</strong>.</li>
+        <li>It improves security, modularity, and maintainability.</li>
+      </ul>
+      
+      <h3>Real-world Example:</h3>
+      <p>A capsule medicine contains medicine inside a protective shell. You only use it as intended, without knowing or touching what’s inside. Similarly, in a program, encapsulation hides internal variables and exposes only safe methods to access or modify them.</p>
+      
+      <h3>Python Code Example:</h3>
+      <pre>class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # private variable
+    
+    # Getter method
+    def get_balance(self):
+        return self.__balance
+        
+    # Setter method
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+        else:
+            print("Invalid amount!")
+
+# Using the class
+account = BankAccount(1000)
+print(account.get_balance())  # Output: 1000
+account.deposit(500)
+print(account.get_balance())  # Output: 1500
+# Direct access is not allowed: account.__balance -> Error</pre>
+      
+      <h3>Benefits of Encapsulation:</h3>
+      <ul>
+        <li>Protects data from unauthorized access.</li>
+        <li>Improves code modularity – the class can be maintained independently.</li>
+        <li>Easier debugging and maintenance – all operations on data are controlled.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Inheritance<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "Inheritance is a concept in OOPS that allows one class, called the <strong>child class</strong>, to inherit properties and methods from another class, called the <strong>parent class</strong>. This helps in <strong>reusing code</strong> and <strong>reducing redundancy</strong>."</p>
+      
+      <h3>Key Points:</h3>
+      <ul>
+        <li>Promotes code reusability – common code is written once in the parent class.</li>
+        <li>Helps in extending functionality – child class can add new features.</li>
+        <li>Supports hierarchical relationships between classes.</li>
+      </ul>
+      
+      <h3>Real-world Example:</h3>
+      <p>A <code>Vehicle</code> class can have properties like <code>speed</code> and <code>fuel</code>. A <code>Car</code> class can inherit these properties and methods, and add its own features like <code>number_of_doors</code>.</p>
+      
+      <h3>Python Code Example:</h3>
+      <pre># Parent class
+class Vehicle:
+    def __init__(self, brand, speed):
+        self.brand = brand
+        self.speed = speed
+        
+    def show_speed(self):
+        print(f"{self.brand} is running at {self.speed} km/h")
+
+# Child class
+class Car(Vehicle):
+    def __init__(self, brand, speed, doors):
+        super().__init__(brand, speed)  # inherit properties from Vehicle
+        self.doors = doors
+        
+    def show_doors(self):
+        print(f"{self.brand} has {self.doors} doors")
+
+# Using the classes
+my_car = Car("Toyota", 120, 4)
+my_car.show_speed()   # Output: Toyota is running at 120 km/h
+my_car.show_doors()   # Output: Toyota has 4 doors</pre>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Polymorphism<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "Polymorphism means 'many forms'. It allows the same function or method name to behave differently depending on the object that calls it. This makes code more flexible and easier to maintain."</p>
+      
+      <h3>Key Points:</h3>
+      <ul>
+        <li>Achieved through <strong>method overriding</strong> (Python) and <strong>method overloading</strong> (other languages).</li>
+        <li>Lets objects of different classes respond differently to the same method call.</li>
+        <li>Helps in code reusability and extensibility.</li>
+      </ul>
+      
+      <h3>1. Method Overriding (Runtime Polymorphism)</h3>
+      <p>Happens when a child class defines a method that already exists in its parent class but provides a new implementation. The method name and parameters must be the same. Decided at runtime.</p>
+      <p><strong>Python Example:</strong></p>
+      <pre>class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+a = Animal()
+d = Dog()
+a.speak()  # Output: Animal speaks
+d.speak()  # Output: Dog barks</pre>
+      
+      <h3>2. Method Overloading</h3>
+      <p>Means having multiple methods with the same name but different parameters. Python does not support traditional compile-time overloading; the last defined method overrides previous ones.</p>
+      <p><strong>Python Example:</strong></p>
+      <pre>class MathOps:
+    def add(self, a, b):
+        print(a + b)
+        
+    def add(self, a, b, c):
+        print(a + b + c)
+
+obj = MathOps()
+obj.add(2, 3, 4)  # Output: 9
+# obj.add(2, 3) # This would cause an error</pre>
+      <p>Explanation: The first <code>add(a, b)</code> method is overridden by the second <code>add(a, b, c)</code> method. Python only keeps the last defined method.</p>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Class and Object<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "In OOPS, a <strong>class</strong> is like a blueprint or template for creating objects. It defines the <strong>attributes</strong> (data) and <strong>behaviors</strong> (methods) that its objects will have. An <strong>object</strong> is a real-world instance of that class, created using the blueprint."</p>
+      
+      <h3>Python Example:</h3>
+      <pre>class Student:
+    def __init__(self, name, age):
+        self.name = name  # attribute
+        self.age = age    # attribute
+        
+    def show(self):       # method (behavior)
+        print("Name:", self.name, "Age:", self.age)
+
+# Creating an object
+stu1 = Student("Jin", 21)
+stu1.show()  # Output: Name: Jin Age: 21</pre>
+      <p><strong>Explanation:</strong> <code>Student</code> is the class (blueprint). <code>stu1</code> is an object (instance). <code>show()</code> is a method.</p>
+      
+      <h3>Real-world Analogy:</h3>
+      <ul>
+        <li><strong>Class:</strong> A blueprint of a house.</li>
+        <li><strong>Object:</strong> A house built using that blueprint.</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops python">OOPS: Constructor<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>Definition:</strong> "A constructor is a special method in a class that is <strong>automatically called when an object is created</strong>. It is mainly used to <strong>initialize object variables</strong> with default or user-provided values."</p>
+      
+      <h3>Key Points:</h3>
+      <ul>
+        <li>Automatically invoked when an object is created.</li>
+        <li>Used to initialize attributes of the object.</li>
+        <li>In Python, the constructor is named <code>__init__</code>.</li>
+      </ul>
+      
+      <h3>Python Example:</h3>
+      <pre>class Student:
+    def __init__(self, name, age):  # Constructor
+        self.name = name
+        self.age = age
+        
+    def show(self):
+        print("Name:", self.name, "Age:", self.age)
+
+stu1 = Student("Jin", 21)  # __init__ called automatically
+stu1.show()                 # Output: Name: Jin Age: 21</pre>
+      
+      <h3>Types of Constructors</h3>
+      <h4>Default Constructor:</h4>
+      <p>Takes no parameters except <code>self</code>. Python provides it automatically if no constructor is defined.</p>
+      <pre>class Student:
+    def __init__(self):
+        self.name = "Unknown"
+        self.age = 0
+stu = Student()
+print(stu.name, stu.age)  # Output: Unknown 0</pre>
+      
+      <h4>Parameterized Constructor:</h4>
+      <p>Takes parameters to initialize object attributes.</p>
+      <pre>stu1 = Student("Jin", 21)
+print(stu1.name, stu1.age)  # Output: Jin 21</pre>
+      
+      <h4>Constructor Overloading (Simulation in Python):</h4>
+      <p>Python doesn’t support traditional overloading, but we simulate it using default arguments.</p>
+      <pre>class Student:
+    def __init__(self, name="Unknown", age=0):
+        self.name = name
+        self.age = age
+        
+stu1 = Student()
+stu2 = Student("Jin", 21)
+print(stu1.name, stu1.age)  # Output: Unknown 0
+print(stu2.name, stu2.age)  # Output: Jin 21</pre>
+    </div>
+
 
     <footer>
-      Viji's Interview Notes &copy; 2023
+      Viji's Interview Notes &copy; 2025
     </footer>
   </div>
 
@@ -502,8 +1743,10 @@ printf("%d", *ptr); // Prints 10</pre>
       // Expand all topics
       expandAllBtn.addEventListener('click', () => {
         topics.forEach(topic => {
-          topic.classList.add('active');
-          topic.nextElementSibling.classList.add('show');
+          if (topic.style.display !== 'none') {
+            topic.classList.add('active');
+            topic.nextElementSibling.classList.add('show');
+          }
         });
       });
 
@@ -528,7 +1771,7 @@ printf("%d", *ptr); // Prints 10</pre>
           topics.forEach(topic => {
             const categories = topic.getAttribute('data-categories');
             
-            if (category === 'all' || categories.includes(category)) {
+            if (category === 'all' || (categories && categories.includes(category))) {
               topic.style.display = 'flex';
             } else {
               topic.style.display = 'none';
