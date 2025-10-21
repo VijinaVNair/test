@@ -3,33 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viji’s Interview Notes</title>
+  <title>Viji's Interview Notes</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
       background-color: #fafafa;
       line-height: 1.6;
+      color: #333;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
     }
 
     h2 {
       color: #333;
       text-align: center;
-      margin-bottom: 30px;
+      margin: 15px 0 25px 0;
+      font-size: 1.5rem;
+      padding: 0 10px;
     }
 
+    /* Quick Navigation Styles */
+    .nav-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .nav-btn {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+      flex-grow: 1;
+      text-align: center;
+      min-width: 80px;
+    }
+
+    .nav-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .nav-btn.active {
+      background-color: #0056b3;
+      font-weight: bold;
+    }
+
+    /* Topic Styles */
     .topic {
       background-color: #f2f2f2;
-      padding: 10px 15px;
-      margin-bottom: 5px;
+      padding: 15px;
+      margin-bottom: 8px;
       cursor: pointer;
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.2s;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
     }
 
     .topic:hover {
       background-color: #e0e0e0;
+    }
+
+    .topic.active {
+      background-color: #e0e0e0;
+    }
+
+    .topic-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .topic.active .topic-icon {
+      transform: rotate(90deg);
     }
 
     .description {
@@ -40,139 +109,437 @@
       margin-bottom: 10px;
       padding: 0 15px;
       transition: max-height 0.4s ease, padding 0.3s ease;
+      width: 100%;
     }
 
     .description.show {
-      max-height: 600px; /* increase if text is long */
+      max-height: 5000px;
+      padding: 15px;
+    }
+
+    .description p {
+      margin-bottom: 10px;
+    }
+
+    .description ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding: 0 10px;
+    }
+
+    .btn {
+      background-color: #007BFF;
+      color: white;
+      border: none;
       padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+        margin: 10px 0 20px 0;
+      }
+      
+      .nav-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      
+      .topic {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+      }
+      
+      .description {
+        padding: 0 12px;
+      }
+      
+      .description.show {
+        padding: 12px;
+      }
+      
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 8px;
+      }
+      
+      h2 {
+        font-size: 1.2rem;
+      }
+      
+      .nav-btn {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+      }
+      
+      .topic {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+      
+      .description {
+        padding: 0 10px;
+        font-size: 0.9rem;
+      }
+      
+      .description.show {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Interview Preparation – Viji</h2>
 
-  <h2>Interview Preparation – Viji</h2>
+    <!-- Quick Navigation Buttons -->
+    <div class="nav-container">
+      <button class="nav-btn active" data-category="all">All</button>
+      <button class="nav-btn" data-category="hr">HR</button>
+      <button class="nav-btn" data-category="python">Python</button>
+      <button class="nav-btn" data-category="java">Java</button>
+      <button class="nav-btn" data-category="project">Project</button>
+      <button class="nav-btn" data-category="placement">Placement</button>
+      <button class="nav-btn" data-category="c">C</button>
+      <button class="nav-btn" data-category="dbms">DBMS</button>
+      <button class="nav-btn" data-category="oops">OOPS</button>
+    </div>
 
-  <div class="topic">1️⃣ Self Introduction</div>
-  <div class="description">
-    First and foremost, I’d like to thank you for giving me the opportunity to introduce myself. I’m Vijina V. Nair from Kerala. I'm a final-year Computer Engineering student at LBS College of Engineering, Kasaragod. On a personal level, I would describe myself as an energetic and people-oriented individual who thrives on collaboration. I enjoy sharing ideas, learning through real-world experiences, and working in teams to achieve common goals. I adapt quickly to new situations and maintain a positive, solution-focused approach even when faced with challenges. I enjoy taking initiative but also value listening and learning from others. I like challenges because they push me to improve, and I am comfortable taking responsibility when needed. What motivates me most are small but meaningful accomplishments—solving a problem, helping someone, or making a positive impact within my team.
-  </div>
+    <div class="controls">
+      <button class="btn" id="expand-all">Expand All</button>
+      <button class="btn" id="collapse-all">Collapse All</button>
+    </div>
 
-  <div class="topic">2️⃣ Academic Background & Skills</div>
-  <div class="description">
-    Academically, I have built a solid foundation in programming and AI technologies. I work with Python, C, Java, HTML, CSS, JavaScript, and MySQL. Recently, I completed an AI and Python internship at PACELAB, Kochi, where I strengthened my AI fundamentals and applied them to practical tasks. Some of my key projects include a Malayalam Voice Assistant for College Administration and a Pet Adoption Portal connecting shelters with people interested in adopting pets.
-  </div>
+    <!-- HR Questions -->
+    <div class="topic" data-categories="hr">1️⃣ Self Introduction<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>First of all, thank you for giving me this opportunity to introduce myself. I'm Vijina V. Nair from Kerala, and I'm currently pursuing my final year in Computer Engineering at LBS College of Engineering, Kasaragod.</p>
+      <p>I would describe myself as an energetic and people-oriented individual who thrives on collaboration. I enjoy sharing ideas, learning through real-world experiences, and working in teams to achieve common goals. I adapt quickly to new situations and maintain a positive, solution-focused approach even when faced with challenges. I enjoy taking initiative but also value listening and learning from others. What motivates me most are small but meaningful accomplishments—solving a problem, helping someone overcome a difficulty, or making a positive impact within my team.</p>
+      <p>Apart from academics, I'm passionate about teaching high school students at a tuition center, where I enjoy simplifying concepts and inspiring young learners. I also work as an anchor for public events like weddings and other functions, which has strengthened my communication and stage-handling skills.</p>
+      <p>Academically, I have built a solid foundation in programming and AI technologies. I work with Python, C, Java, HTML, CSS, JavaScript, and MySQL. Recently, I completed an AI and Python internship at PACELAB, Kochi, where I strengthened my AI fundamentals and applied them to practical tasks. Some of my key projects include a Malayalam Voice Assistant for College Administration, which helps students and staff access academic information in their regional language, and a Pet Adoption Portal, which connects shelters with people interested in adopting pets.</p>
+      <p>Looking ahead, I aim to become a professional who works with cutting edge technologies such as AI and automation, while ensuring my work is always connected to real-world needs. My goal is to keep learning, stay adaptable, and contribute meaningfully in every role I take on.</p>
+    </div>
 
-  <div class="topic">3️⃣ Hobbies</div>
-  <div class="description">
-    Apart from my studies, I enjoy engaging in creative and productive activities. I love exploring new technologies, building small projects, and improving my problem-solving skills. I also enjoy reading, learning new languages, and participating in events or competitions where I can challenge myself. In my free time, I like to listen to music, explore new ideas, and get involved in activities like coordination and volunteering, which help me improve teamwork and leadership.
-  </div>
+    <div class="topic" data-categories="hr">3️⃣ Hobbies<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>Apart from my studies, I enjoy engaging in creative and productive activities. I love exploring new technologies, building small projects, and improving my problem-solving skills. I also enjoy reading, learning new languages, and participating in events or competitions where I can challenge myself. I've read a few self-development books that really inspired me — like The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. In my free time, I like to listen to music, explore new ideas, and sometimes get involved in activities like coordination and volunteering, which help me improve teamwork and leadership.</p>
+    </div>
 
-  <div class="topic">4️⃣ Strengths</div>
-  <div class="description">
-    Being NRPF Regional Student Coordinator helped me grow as a leader. I organized events, coordinated with teams, and communicated with students, faculties, and officers. It taught me to handle unexpected challenges and stay organized under pressure. My strengths are teamwork, problem-solving, communication, and adaptability. I’m also a quick learner who plans tasks and completes them efficiently.
-  </div>
+    <div class="topic" data-categories="hr">4️⃣ Strengths<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>My key strengths are teamwork, problem-solving, communication, and adaptability. For example, as the NRPF Regional Student Coordinator, I worked closely with multiple teams to organize events, which strengthened my teamwork and communication skills. During the events, unexpected challenges would arise, and I had to quickly find solutions, which enhanced my problem-solving ability. I also learned to adapt to changing situations and priorities, ensuring tasks were completed efficiently without compromising quality. Additionally, I am a quick learner, which helped me take on new responsibilities confidently.</p>
+    </div>
 
-  <div class="topic">5️⃣ Weakness</div>
-  <div class="description">
-    My biggest weakness is that I sometimes find it hard to say no to people. In the past, this made me take on too many tasks and feel overwhelmed. But I’ve learned to manage it by checking my workload first before taking new responsibilities.
-  </div>
+    <div class="topic" data-categories="hr">5️⃣ Weakness<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>My biggest weakness is that I sometimes find it hard to say no to people. In the past, this made me take on too many tasks and feel a bit overwhelmed. But I've learned from that experience — now, before I agree to something new, I take a moment to look at my current workload and make sure I have the time and energy to do it well.</p>
+    </div>
 
-  <div class="topic">6️⃣ Why Should We Hire You?</div>
-  <div class="description">
-    You should select me because I’m a dedicated and responsible person who always gives my best. I have a strong foundation in programming, especially in Python, and I’m eager to learn and grow. I work well in teams, communicate clearly, and handle pressure calmly. I’ve successfully led projects, which taught me to take initiative and deliver results. I may be at the beginning of my career, but I’m passionate, hardworking, and ready to contribute from day one.
-  </div>
+    <div class="topic" data-categories="hr">6️⃣ Why Should We Hire You?<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>You should select me because I'm a dedicated and responsible person who always gives my best. I have a strong foundation in programming, especially in Python, and I'm always eager to learn and grow. I work well in a team, communicate clearly, and can handle pressure without losing focus. I've also successfully led projects, which taught me how to take initiative and deliver results. I may be at the beginning of my career, but I'm passionate, hardworking, and ready to make a meaningful contribution from day one.</p>
+    </div>
 
-  <div class="topic">7️⃣ Higher Education</div>
-  <div class="description">
-    I see learning as a lifelong process, even after graduation. I’m eager to keep improving and gaining new skills to become a better software engineer. If the role requires training or additional education, I’m more than ready for it.
-  </div>
+    <div class="topic" data-categories="hr">7️⃣ Higher Education<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I see learning as a lifelong process, even after I complete my graduation. I'm always eager to keep improving and gaining new skills to become a better software engineer. If the role requires further training or education, I'm more than ready to take it on and give my best.</p>
+    </div>
 
-  <div class="topic">8️⃣ Salary Expectation</div>
-  <div class="description">
-    I’m focused on getting a good learning environment where I can grow my technical skills. Once I perform well and keep learning, salary growth will follow naturally. I’m comfortable with the company’s standard compensation for freshers.
-  </div>
+    <div class="topic" data-categories="hr">8️⃣ Salary Expectation<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I'm more focused on getting a good learning environment where I can grow and improve my technical skills. I believe that once I perform well and keep learning, salary growth will naturally follow. I also trust that the company offers a fair package for freshers based on industry standards, so I'm comfortable with the standard compensation for this role.</p>
+    </div>
 
-  <div class="topic">9️⃣ Willingness to Relocate</div>
-  <div class="description">
-    I would like to relocate for the sake of my career. It’s a good way to meet new people, expand my network, and adapt to new environments.
-  </div>
+    <div class="topic" data-categories="hr">9️⃣ Willingness to Relocate<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I would like to relocate for the sake of my career. It's a good way for me to meet new people and expand my network. I believe that it will improve my knowledge and also, I believe that relocation teaches how to change or work with new colleagues.</p>
+    </div>
 
-  <div class="topic">🔟 Learning New Things</div>
-  <div class="description">
-    I’m very comfortable learning new things — in fact, I enjoy it. I explore new topics, watch tutorials, and practice until I understand fully. That’s how I learned Python and other technical concepts.
-  </div>
+    <div class="topic" data-categories="hr">🔟 Learning New Things<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I'm very comfortable learning new things — in fact, I really enjoy it. I believe continuous learning helps me grow both personally and professionally. Whenever I come across something new, I like to explore it on my own first, watch tutorials, and practice until I understand it fully. That's exactly how I learned Python and other technical concepts. I see new things as opportunities to improve, not as challenges.</p>
+    </div>
 
-  <div class="topic">1️⃣1️⃣ Preparation for Interview</div>
-  <div class="description">
-    I prepared by reviewing my resume, revising key topics related to Python, AI, and my projects. I also practiced common interview questions and focused on expressing my answers clearly and confidently.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣1️⃣ Preparation for Interview<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I prepared for this interview by carefully reviewing my resume and revising key topics related to Python, AI, and my projects. I also practiced common interview questions and focused on improving how I explain my answers clearly and confidently. For me, good preparation isn't just about studying — it's also about understanding my strengths and being able to express them effectively.</p>
+    </div>
 
-  <div class="topic">1️⃣2️⃣ Challenges as a Team</div>
-  <div class="description">
-    During our final year project, our team faced communication and time management issues. I organized weekly meetings, discussed progress, and reassigned tasks. Communication improved teamwork and we completed our project on time.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣2️⃣ Challenges as a Team<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>During my final year project, our team faced significant challenges related to communication and coordination. As the project leader, I noticed that our team members had different schedules and varying expectations, which led to misunderstandings and delays. To address this, I implemented weekly team meetings where we could all come together to discuss progress, clarify doubts, and realign our tasks. I also encouraged open and transparent communication, ensuring that everyone's ideas and concerns were heard and respected. As a result, our team's collaboration improved significantly. We became more organized, met our deadlines, and ultimately delivered a successful project. This experience taught me that effective communication and proactive planning are key to overcoming team challenges and achieving our goals.</p>
+    </div>
 
-  <div class="topic">1️⃣3️⃣ Why LTI Mindtree?</div>
-  <div class="description">
-    I want to join LTI Mindtree because it values innovation and continuous learning. It works with cutting-edge technologies like AI, cloud, and automation, which I’m passionate about. LTI also offers great growth opportunities for young engineers.
-  </div>
+    <div class="topic" data-categories="hr placement">1️⃣3️⃣ Why LTI Mindtree?<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I want to join LTI Mindtree because it's a company that truly values innovation and continuous learning. It works with cutting-edge technologies like AI, cloud, and automation, which are areas I'm genuinely passionate about. I also appreciate that LTI provides young engineers with opportunities to learn, grow, and take on responsibilities early in their careers.</p>
+    </div>
 
-  <div class="topic">1️⃣4️⃣ About LTI Mindtree</div>
-  <div class="description">
-    LTI is a global technology consulting and digital solutions company formed after the merger of Larsen & Toubro Infotech and Mindtree. It works in AI, cloud, data analytics, automation, and cybersecurity. Currently, the company is working on the PAN 2.0 project involving PAN card allotment, Aadhaar integration, and linking.
-  </div>
+    <div class="topic" data-categories="hr placement">1️⃣4️⃣ About LTI Mindtree<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>LTI is a global technology consulting and digital solutions company, formed after the merger of Larsen & Toubro Infotech and Mindtree. It works in areas like AI, cloud, data analytics, automation, and cybersecurity. Currently, the company is working on the PAN 2.0 project, which involves tasks such as PAN card allotment, Aadhaar integration, and PAN linking, with a project duration of around 18 months.</p>
+    </div>
 
-  <div class="topic">1️⃣5️⃣ Questions to Ask Interviewer</div>
-  <div class="description">
-    Could you please tell me if there will be any training provided for this role?<br>
-    I’d also love to know how you would describe the qualities of an ideal employee at LTI Mindtree.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣5️⃣ Questions to Ask Interviewer<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>Could you please tell me if there will be any training provided for this role? I'd love to know how you would describe the qualities of an ideal employee at LTI Mindtree.</p>
+    </div>
 
-  <div class="topic">1️⃣6️⃣ 5 Years from Now</div>
-  <div class="description">
-    In five years, I see myself growing with LTIMindtree as a skilled professional. I want to work on real projects in AI, cloud, and automation, take more responsibility, and make a meaningful impact.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣6️⃣ 5 Years from Now<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>In five years, I see myself growing with LTIMindtree as a skilled professional. I want to work on real projects in AI, cloud, and automation. I hope to take more responsibility, contribute to my team, and keep learning. My goal is to make a meaningful impact and grow along with the company.</p>
+    </div>
 
-  <div class="topic">1️⃣7️⃣ Why Computer Science</div>
-  <div class="description">
-    I chose Computer Science because I’ve always been curious about how technology shapes the world. I enjoy problem-solving and creating useful solutions. It’s a field that combines logic, creativity, and innovation — always evolving, which keeps me motivated.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣7️⃣ Why Computer Science<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I chose Computer Science because I've always been curious about how technology shapes the world around us. I enjoy problem-solving and creating solutions that make life easier, and CS gives me the right platform to do that. It combines logic, creativity, and innovation, which excites me. I also see this field as constantly evolving, so it keeps me motivated to keep learning and growing.</p>
+    </div>
 
-  <div class="topic">1️⃣8️⃣ Books Read</div>
-  <div class="description">
-    I’ve read The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. I also enjoy The Monk Who Sold His Ferrari by Robin Sharma. Apart from books, I read tech blogs and AI articles to stay updated.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣8️⃣ Books Read<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I've read The Power of Subconscious Mind by Joseph Murphy and Atomic Habits by James Clear. I also enjoy The Monk Who Sold His Ferrari by Robin Sharma. Apart from books, I read tech blogs and AI articles to stay updated.</p>
+    </div>
 
-  <div class="topic">1️⃣9️⃣ Leadership</div>
-  <div class="description">
-    Yes, I do have leadership qualities. I was the project leader for our Malayalam Voice Assistant project and also the NRPF Regional Student Coordinator under NSS. Both helped me improve communication, teamwork, and calm problem-solving.
-  </div>
+    <div class="topic" data-categories="hr">1️⃣9️⃣ Leadership<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>Yes, I do think I have leadership qualities. I was the project leader for my final-year project — the Malayalam Voice Assistant for College Administration. I guided my team, planned our tasks, and made sure we finished everything on time. Apart from that, I was also the NRPF Regional Student Coordinator under the NSS Cell of KTU, where I got to organize activities and coordinate with students from different colleges. Both experiences really helped me grow — I learned how to communicate better, solve problems calmly, and keep everyone motivated.</p>
+      <p>If I'm selected as the team leader, I'll focus on good communication first. I'll make sure everyone understands their role and feels comfortable sharing ideas. I believe a team works best when everyone feels included and respected. I'll plan the work clearly, set small goals, and keep regular check-ins to track progress. If any issue comes up, I'll handle it calmly, discuss it with the team, and find the best solution together. My aim would be to keep the team motivated and make sure we deliver quality work on time.</p>
+    </div>
 
-  <div class="topic">2️⃣0️⃣ Non-Technical Achievements</div>
-  <div class="description">
-    I work as an anchor for college events, improving confidence and communication. I’ve led projects, taught English to students, and joined coding competitions. These experiences strengthened my teamwork, patience, and problem-solving.
-  </div>
+    <div class="topic" data-categories="hr">2️⃣0️⃣ Non-Technical Achievements<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>Besides academics, I have several achievements that helped me grow personally and professionally. I work as an anchor for college events, which has really improved my confidence and communication skills. Being on stage and addressing a large audience taught me how to think quickly, stay calm under pressure, and engage people effectively. I also led my final year project team, where I coordinated tasks, made sure everyone's ideas were heard, and completed the project successfully on time. This experience strengthened my leadership and teamwork skills. In addition, I taught English to younger students, which helped me become more patient and improve my ability to explain concepts clearly. I've also participated in coding competitions, where I learned problem-solving under time pressure. All these experiences together taught me the importance of communication, teamwork, leadership, and staying focused, which I believe are as important as technical skills.</p>
+    </div>
 
-  <div class="topic">2️⃣1️⃣ Soft Skills in Action</div>
-  <div class="description">
-    I used my soft skills in several situations:<br><br>
-    1. *Teamwork:* I ensured everyone's ideas were heard during projects.<br>
-    2. *Communication:* I taught English to younger students, explaining in simple ways.<br>
-    3. *Problem-Solving:* In coding competitions, I analyzed issues calmly under pressure.<br>
-    4. *Leadership:* I planned and guided my team to meet deadlines without stress.
+    <div class="topic" data-categories="hr">2️⃣1️⃣ Soft Skills in Action<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p>I've used my soft skills in several situations. For example:</p>
+      <ul>
+        <li><strong>Teamwork:</strong> During my final year project, I worked closely with my group members. I made sure everyone's ideas were heard and helped resolve conflicts, which kept the project on track.</li>
+        <li><strong>Communication:</strong> While teaching English to younger students, I had to explain concepts in a simple way so they could understand. Clear communication helped them learn faster.</li>
+        <li><strong>Problem-solving:</strong> In a college coding competition, our program had a major bug. I stayed calm, analyzed the problem, and suggested a solution that helped the team submit on time.</li>
+        <li><strong>Leadership:</strong> As a project leader, I planned tasks, motivated my team, and ensured deadlines were met without overloading anyone.</li>
+      </ul>
+    </div>
+
+    <!-- Technical Questions -->
+    <div class="topic" data-categories="python">Python Questions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>What is Python?</strong></p>
+      <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.</p>
+      
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Easy to learn and use</li>
+        <li>Extensive standard library</li>
+        <li>Cross-platform compatibility</li>
+        <li>Dynamically typed</li>
+        <li>Supports automatic memory management</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="java">Java Questions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>What is Java?</strong></p>
+      <p>Java is a high-level, object-oriented programming language that is designed to be platform-independent through the Java Virtual Machine (JVM).</p>
+      
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Platform independent (Write Once, Run Anywhere)</li>
+        <li>Object-oriented</li>
+        <li>Secure</li>
+        <li>Multithreaded</li>
+        <li>Automatic memory management (Garbage Collection)</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="c">C Programming Questions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>main() function in C</strong></p>
+      <p>In C, the main() function is the starting point of any program. Every C program must have a main() function, otherwise the program won't run.</p>
+      <p>Example:</p>
+      <pre>#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello World\n");
+    return 0;
+}</pre>
+      
+      <p><strong>Pointers in C</strong></p>
+      <p>A pointer in C is a variable that stores the memory address of another variable.</p>
+      <p>Example:</p>
+      <pre>int a = 10;
+int *ptr = &a;
+printf("%d", *ptr); // Prints 10</pre>
+    </div>
+
+    <div class="topic" data-categories="dbms">DBMS Questions<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>What is DBMS?</strong></p>
+      <p>DBMS stands for Database Management System. It is software that stores, manages, and organizes data in a structured way.</p>
+      
+      <p><strong>Primary Key</strong></p>
+      <p>A Primary Key is a column or a set of columns in a table that uniquely identifies each record. It cannot have NULL values.</p>
+      
+      <p><strong>SQL Commands</strong></p>
+      <ul>
+        <li>DDL (Data Definition Language): CREATE, ALTER, DROP</li>
+        <li>DML (Data Manipulation Language): INSERT, UPDATE, DELETE</li>
+        <li>DQL (Data Query Language): SELECT</li>
+        <li>DCL (Data Control Language): GRANT, REVOKE</li>
+        <li>TCL (Transaction Control Language): COMMIT, ROLLBACK</li>
+      </ul>
+    </div>
+
+    <div class="topic" data-categories="oops">OOPS Concepts<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>What is OOPS?</strong></p>
+      <p>OOPS, or Object-Oriented Programming, is a programming paradigm that organizes code around objects rather than just functions and logic.</p>
+      
+      <p><strong>Key Concepts:</strong></p>
+      <ul>
+        <li><strong>Abstraction:</strong> Hiding internal details and showing only essential features</li>
+        <li><strong>Encapsulation:</strong> Wrapping data and methods into a single unit</li>
+        <li><strong>Inheritance:</strong> Creating new classes from existing ones</li>
+        <li><strong>Polymorphism:</strong> Same method name behaving differently in different contexts</li>
+      </ul>
+    </div>
+
+    <!-- Project Questions -->
+    <div class="topic" data-categories="project">Malayalam Voice Assistant Project<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>1. Brief Project Explanation</strong></p>
+      <p>A voice assistant that understands Malayalam and English queries, matches them with JSON patterns, and provides answers.</p>
+      
+      <p><strong>2. Technologies Used</strong></p>
+      <p>Python, SpeechRecognition, Pygame, Threading, JSON.</p>
+      
+      <p><strong>3. Challenges Faced and Solutions</strong></p>
+      <ul>
+        <li>Accuracy issues → improved pattern matching</li>
+        <li>Ambiguous queries → added synonyms in JSON</li>
+        <li>JSON errors → corrected format</li>
+      </ul>
+      
+      <p><strong>4. My Role in the Project</strong></p>
+      <p>Implemented voice input, query matching, multilingual support, and testing.</p>
+    </div>
+
+    <div class="topic" data-categories="project">Pet Adoption Project<span class="topic-icon">▶</span></div>
+    <div class="description">
+      <p><strong>1. What is your project?</strong></p>
+      <p>The project is a Pet Adoption System where users can view available pets, adopt them, and shelters can list pets online. It simplifies the adoption process and improves pet welfare.</p>
+      
+      <p><strong>2. How does it work?</strong></p>
+      <p>Users create accounts, search for pets, view details, and submit adoption requests. Shelters receive notifications and approve or reject requests.</p>
+      
+      <p><strong>3. Technologies Used</strong></p>
+      <p>Frontend uses HTML, CSS, and JavaScript; backend is implemented in PHP; MySQL is used for data storage.</p>
+      
+      <p><strong>4. What was your role in the project?</strong></p>
+      <p>I handled backend development, database design, and adoption workflow implementation.</p>
+    </div>
+
+    <footer>
+      Viji's Interview Notes &copy; 2023
+    </footer>
   </div>
 
   <script>
-    const topics = document.querySelectorAll('.topic');
+    document.addEventListener('DOMContentLoaded', function() {
+      const topics = document.querySelectorAll('.topic');
+      const expandAllBtn = document.getElementById('expand-all');
+      const collapseAllBtn = document.getElementById('collapse-all');
+      const navButtons = document.querySelectorAll('.nav-btn');
 
-    topics.forEach(topic => {
-      topic.addEventListener('click', () => {
-        const desc = topic.nextElementSibling;
-        desc.classList.toggle('show');
+      // Toggle individual topics
+      topics.forEach(topic => {
+        topic.addEventListener('click', () => {
+          const desc = topic.nextElementSibling;
+          topic.classList.toggle('active');
+          desc.classList.toggle('show');
+        });
+      });
+
+      // Expand all topics
+      expandAllBtn.addEventListener('click', () => {
+        topics.forEach(topic => {
+          topic.classList.add('active');
+          topic.nextElementSibling.classList.add('show');
+        });
+      });
+
+      // Collapse all topics
+      collapseAllBtn.addEventListener('click', () => {
+        topics.forEach(topic => {
+          topic.classList.remove('active');
+          topic.nextElementSibling.classList.remove('show');
+        });
+      });
+
+      // Navigation filtering
+      navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          navButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          
+          const category = button.getAttribute('data-category');
+          
+          // Show/hide topics based on category
+          topics.forEach(topic => {
+            const categories = topic.getAttribute('data-categories');
+            
+            if (category === 'all' || categories.includes(category)) {
+              topic.style.display = 'flex';
+            } else {
+              topic.style.display = 'none';
+              // Also collapse hidden topics
+              topic.classList.remove('active');
+              topic.nextElementSibling.classList.remove('show');
+            }
+          });
+        });
       });
     });
   </script>
-
 </body>
-
 </html>
