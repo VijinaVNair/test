@@ -215,13 +215,22 @@
             line-height: 1.5;
         }
         
+  /* Style for INLINE code (code NOT inside pre) */
         .accordion-content code {
              font-family: "Courier New", Courier, monospace;
-             background-color: #eef;
+             background-color: #eef; /* Light blue background */
+             color: #333; /* Darker text for contrast */
              padding: 2px 5px;
              border-radius: 3px;
         }
 
+        /* Reset style for code INSIDE pre blocks */
+        .accordion-content pre code {
+             background-color: transparent; /* Remove the inner background */
+             color: inherit; /* Use the color from the parent <pre> tag */
+             padding: 0; /* Remove inner padding */
+             border-radius: 0; /* Remove inner radius */
+        }
         /* --- Scroll to Top Button --- */
         #scrollToTopBtn {
             display: none;
