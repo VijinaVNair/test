@@ -5,261 +5,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viji's Interview Prep Notes</title>
     
-    <style>
-        :root {
-            --primary-color: #007bff;
-            --light-primary: #e6f2ff;
-            --dark-text: #333;
-            --light-text: #555;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-            --border-color: #eee;
-            --shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-            --border-radius: 8px;
-        }
+<style>
+:root {
+    --primary-color: #007bff;
+    --light-primary: #e6f2ff;
+    --dark-text: #333;
+    --light-text: #555;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --border-color: #eee;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            background-color: var(--bg-color);
-            color: var(--dark-text);
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--dark-text);
+}
 
-        /* --- Header & Filter Navigation --- */
-        .header {
-            background-color: var(--card-bg);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px;
-        }
-        
-        h1 {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
+/* --- Header & Filter Navigation --- */
+.header {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px;
+}
 
-        #filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style: none;
-            padding: 5px 0;
-        }
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
 
-        #filter-buttons button {
-            background-color: #f0f0f0;
-            border: none;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: var(--light-text);
-            transition: all 0.3s ease;
-        }
+/* Scrollable horizontal filter bar */
+#filter-buttons {
+    display: flex;
+    flex-wrap: nowrap; /* Force one line */
+    overflow-x: auto; /* Enables side scroll */
+    overflow-y: hidden;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 8px;
+    gap: 8px;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch; /* smooth scroll for mobile */
+}
 
-        #filter-buttons button:hover {
-            background-color: #ddd;
-        }
+/* Scrollbar customization (optional) */
+#filter-buttons::-webkit-scrollbar {
+    height: 6px;
+}
+#filter-buttons::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+#filter-buttons::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+}
 
-        #filter-buttons button.active {
-            background-color: var(--primary-color);
-            color: white;
-            box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
-        }
+/* Filter Buttons */
+#filter-buttons button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    flex-shrink: 0; /* prevent shrinking on scroll */
+    transition: all 0.3s ease;
+}
 
-        /* --- Global Controls --- */
-        .global-controls {
-            text-align: center;
-            padding: 15px 10px;
-        }
+#filter-buttons button:hover {
+    background-color: #ddd;
+}
 
-        .global-controls button {
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
+#filter-buttons button.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
 
-        .global-controls button:hover {
-            background-color: #5a6268;
-        }
+/* --- Global Controls --- */
+.global-controls {
+    text-align: center;
+    padding: 15px 10px;
+}
 
-        /* --- Main Accordion Content --- */
-        main {
-            padding: 0 10px 80px 10px; /* Padding at bottom for scroll-to-top btn */
-        }
+.global-controls button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
 
-        .accordion-item {
-            background-color: var(--card-bg);
-            margin: 12px auto;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            max-width: 900px;
-            width: 100%;
-            overflow: hidden; /* Ensures border-radius is respected */
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        
-        /* Class added by JS for filtering */
-        .accordion-item.hide {
-            display: none;
-        }
+.global-controls button:hover {
+    background-color: #5a6268;
+}
 
-        .accordion-header {
-            width: 100%;
-            background: none;
-            border: none;
-            text-align: left;
-            padding: 18px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--dark-text);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-        }
+/* --- Main Accordion Content --- */
+main {
+    padding: 0 10px 80px 10px;
+}
 
-        .accordion-item:last-child .accordion-header {
-            border-bottom: none;
-        }
-        
-        .accordion-header.active {
-             border-bottom-color: var(--border-color);
-        }
+.accordion-item {
+    background-color: var(--card-bg);
+    margin: 12px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-        .accordion-header .icon {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--primary-color);
-            transition: transform 0.3s ease;
-            transform-origin: center;
-        }
+.accordion-item.hide {
+    display: none;
+}
 
-        .accordion-header.active .icon {
-            transform: rotate(45deg);
-        }
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
 
-        .accordion-content {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
+.accordion-item:last-child .accordion-header {
+    border-bottom: none;
+}
 
-            background-color: #fafafa;
-        }
+.accordion-header.active {
+    border-bottom-color: var(--border-color);
+}
 
-        .accordion-content.active {
-            padding: 15px 20px 20px;
-            max-height: 10000px; /* Large value to allow content to expand */
-            border-top: 1px solid var(--light-primary);
-        }
+.accordion-header .icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
 
-        .accordion-content p,
-        .accordion-content ul,
-        .accordion-content ol,
-        .accordion-content hr {
-            margin-bottom: 15px;
-        }
-        
-        .accordion-content strong {
-            color: var(--dark-text);
-        }
-        
-        .accordion-content h4 {
-            color: var(--primary-color);
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+}
 
-        .accordion-content ul,
-        .accordion-content ol {
-            padding-left: 25px;
-        }
-        
-        .accordion-content li {
-            margin-bottom: 8px;
-        }
-        
-        .accordion-content hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--border-color);
-        }
+.accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
 
-        .accordion-content pre {
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-        
-  /* Style for INLINE code (code NOT inside pre) */
-        .accordion-content code {
-             font-family: "Courier New", Courier, monospace;
-             background-color: #eef; /* Light blue background */
-             color: #333; /* Darker text for contrast */
-             padding: 2px 5px;
-             border-radius: 3px;
-        }
+.accordion-content.active {
+    padding: 15px 20px 20px;
+    max-height: 10000px;
+    border-top: 1px solid var(--light-primary);
+}
 
-        /* Reset style for code INSIDE pre blocks */
-        .accordion-content pre code {
-             background-color: transparent; /* Remove the inner background */
-             color: inherit; /* Use the color from the parent <pre> tag */
-             padding: 0; /* Remove inner padding */
-             border-radius: 0; /* Remove inner radius */
-        }
-        /* --- Scroll to Top Button --- */
-        #scrollToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 99;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.accordion-content p,
+.accordion-content ul,
+.accordion-content ol,
+.accordion-content hr {
+    margin-bottom: 15px;
+}
 
-        #scrollToTopBtn:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-    </style>
+.accordion-content strong {
+    color: var(--dark-text);
+}
+
+.accordion-content h4 {
+    color: var(--primary-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+    padding-left: 25px;
+}
+
+.accordion-content li {
+    margin-bottom: 8px;
+}
+
+.accordion-content hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.accordion-content pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Inline code */
+.accordion-content code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #eef;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.accordion-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* --- Scroll to Top Button --- */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    #filter-buttons button {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
+</style>
+
 </head>
 <body>
 
     <header class="header">
-        <h1>Viji's Interview Notes</h1>
+      
         <nav>
             <ul id="filter-buttons">
                 <li><button class="active" data-filter="all">All</button></li>
